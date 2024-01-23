@@ -19,11 +19,14 @@ def printBoard(board):
 
 # take player input
 def playerInput(board):
-    inp = int(input("Enter a number 1-9: "))
-    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
-        board[inp-1] = currentPlayer
-    else:
-        print("\nyou dump fuck\n")
+    while True:
+        inp = int(input("Enter a number 1-9: "))
+        if inp >= 1 and inp <= 9 and board[inp-1] == "-":
+            board[inp-1] = currentPlayer
+            break
+        else:
+            printBoard(board)
+            print("\nyou dump fuck\n")
 
 # check for win or tie
 def checkHorizontal(board):
@@ -60,14 +63,18 @@ def checkDiagonal(board):
         return True
 
 def checkTie(board):
+    global gameRunning
     if "-" not in board:
         printBoard(board)
         print("\nT I E\n")
         gameRunning = False
 
 def checkWin():
+    global gameRunning
     if checkDiagonal(board) or checkHorizontal(board) or checkVertical(board):
+        printBoard(board)
         print(f"\n{winner} is the WINNER\n")
+        gameRunning = False
 
 
 # switch the player
@@ -95,7 +102,10 @@ while gameRunning:
     playerInput(board)
     checkWin()
     checkTie(board)
-    switchPlayer()
-    computer(board)
-    checkWin()
-    checkTie(board)
+    if gameRunning == False:
+        break
+    else:
+        switchPlayer()
+        computer(board)
+        checkWin()
+        checkTie(board)
