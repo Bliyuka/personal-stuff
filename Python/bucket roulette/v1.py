@@ -2,7 +2,6 @@ import random
 import time
 
 totalShot = random.randint(2,6)
-
 killShot = random.randint(1,totalShot-1)
 blankShot = totalShot - killShot
 
@@ -13,14 +12,17 @@ random.shuffle(currentMag)
 #     if choice == "y":        
 
 # while totalShot > 0:
-#     print(f"The gun has {liveShot} shot and {blankShot} blank")
+# print(f"The gun has {killShot} shot and {blankShot} blank")
 
-print(f"\nThere are {totalShot} shots: {killShot} deadly shot(s) and {blankShot} blank shot(s)")
 
-# print(currentMag)
-
+print(currentMag)
+print(f"\neach player has {round(totalShot/2)} hp")
+print("who has higher hp at the end wins")
+print("(dont ask me why im lazy)")
 p1_health = totalShot/2
 p2_health = totalShot/2
+
+print(f"\nThere are {totalShot} shots: {killShot} deadly shot(s) and {blankShot} blank shot(s)")
 
 i = 0
 while i < len(currentMag):
@@ -67,11 +69,11 @@ while i < len(currentMag):
             print("--PLAYER 2 move:")
             print("1) Shoot PLAYER 1")
             print("2) Shoot yourself")
-            p2 = int(input())
+            p2 = int(input("Make your move: "))
             time.sleep(1)
             print("*clack*")
             # time.sleep(1)
-            print("*clack")
+            print("*clack\n")
             if p2 == 1:
                 if currentMag[i] == "KILLSHOT":
                     time.sleep(1)
@@ -95,5 +97,5 @@ while i < len(currentMag):
                     print("the next move is yours\n")
             i += 1
 
-print(f"player 1 hp: {p1_health}")
-print(f"player 2 hp: {p2_health}")
+print(f"player 1 hp: {round(p1_health)}")
+print(f"player 2 hp: {round(p2_health)}")
