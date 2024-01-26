@@ -73,7 +73,7 @@ while i < len(currentMag):
             time.sleep(1)
             print("*clack*")
             # time.sleep(1)
-            print("*clack\n")
+            print("*clack*\n")
             if p2 == 1:
                 if currentMag[i] == "KILLSHOT":
                     time.sleep(1)
