@@ -47,81 +47,83 @@ def checkMove(position):
     global preMove
     if preMove == 1 or preMove == 4 or preMove == 7 or preMove == 28 or preMove == 31 or preMove == 34 or preMove == 55 or preMove == 58 or preMove == 61:
         if position == 1 or position == 2 or position == 3 or position == 10 or position == 11 or position == 12 or position == 19 or position == 20 or position == 21:
-            return position
-        else:
-            print("your next move is in the top left part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 2 or preMove ==5 or preMove == 8 or preMove == 29 or preMove == 32 or preMove == 35 or preMove == 56 or preMove == 59 or preMove == 62:
+
+    elif preMove == 2 or preMove ==5 or preMove == 8 or preMove == 29 or preMove == 32 or preMove == 35 or preMove == 56 or preMove == 59 or preMove == 62:
         if position == 4 or position == 5 or position == 6 or position == 13 or position == 14 or position == 15 or position == 22 or position == 23 or position == 24:
-            return position
-        else:
-            print("your next move is in the top part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 3 or preMove == 6 or preMove == 9 or preMove == 30 or preMove == 33 or preMove == 36 or preMove == 57 or preMove == 60 or preMove == 63:
+
+    elif preMove == 3 or preMove == 6 or preMove == 9 or preMove == 30 or preMove == 33 or preMove == 36 or preMove == 57 or preMove == 60 or preMove == 63:
         if position == 7 or position == 8 or position == 9 or position == 16 or position == 17 or position == 18 or position == 25 or position == 26 or position == 27:
-            return position
-        else:
-            print("your next move is in the top right part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 10 or preMove == 13 or preMove == 16 or preMove == 37 or preMove == 40 or preMove == 43 or preMove == 64 or preMove == 67 or preMove == 70:
+
+    elif preMove == 10 or preMove == 13 or preMove == 16 or preMove == 37 or preMove == 40 or preMove == 43 or preMove == 64 or preMove == 67 or preMove == 70:
         if position == 28 or position == 29 or position == 30 or position == 37 or position == 38 or position == 39 or position == 46 or position == 47 or position == 48:
-            return position
-        else:
-            print("your next move is in the left part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 11 or preMove == 14 or preMove == 17 or preMove == 38 or preMove == 41 or preMove == 44 or preMove == 65 or preMove == 68 or preMove == 71:
+
+    elif preMove == 11 or preMove == 14 or preMove == 17 or preMove == 38 or preMove == 41 or preMove == 44 or preMove == 65 or preMove == 68 or preMove == 71:
         if position == 31 or position == 32 or position == 33 or position == 40 or position == 41 or position == 42 or position == 49 or position == 50 or position == 51:
-            return position
-        else:
-            print("your next move is in the middle part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 12 or preMove == 15 or preMove == 18 or preMove == 39 or preMove == 42 or preMove == 45 or preMove == 66 or preMove == 69 or preMove == 72:
+
+    elif preMove == 12 or preMove == 15 or preMove == 18 or preMove == 39 or preMove == 42 or preMove == 45 or preMove == 66 or preMove == 69 or preMove == 72:
         if position == 34 or position == 35 or position == 36 or position == 43 or position == 44 or position == 45 or position == 52 or position == 53 or position == 54:
-            return position
-        else:
-            print("your next move is in the right part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 19 or preMove == 22 or preMove == 25 or preMove == 46 or preMove == 49 or preMove == 52 or preMove == 73 or preMove == 76 or preMove == 79:
+
+    elif preMove == 19 or preMove == 22 or preMove == 25 or preMove == 46 or preMove == 49 or preMove == 52 or preMove == 73 or preMove == 76 or preMove == 79:
         if position == 55 or position == 56 or position == 57 or position == 64 or position == 65 or position == 66 or position == 73 or position == 74 or position == 75:
-            return position
-        else:
-            print("your next move is in the bottom left part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 20 or preMove == 23 or preMove == 26 or preMove == 47 or preMove == 50 or preMove == 53 or preMove == 74 or preMove == 77 or preMove == 80:
+
+    elif preMove == 20 or preMove == 23 or preMove == 26 or preMove == 47 or preMove == 50 or preMove == 53 or preMove == 74 or preMove == 77 or preMove == 80:
         if position == 58 or position == 59 or position == 60 or position == 67 or position == 68 or position == 69 or position == 76 or position == 77 or position == 78:
-            return position
-        else:
-            print("your next move is in the bottom part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
 
-    if preMove == 21 or preMove == 24 or preMove == 27 or preMove == 48 or preMove == 51 or preMove == 54 or preMove == 75 or preMove == 78 or preMove == 81:
+
+    elif preMove == 21 or preMove == 24 or preMove == 27 or preMove == 48 or preMove == 51 or preMove == 54 or preMove == 75 or preMove == 78 or preMove == 81:
         if position == 61 or position == 62 or position == 63 or position == 70 or position == 71 or position == 72 or position == 78 or position == 80 or position == 81:
-            return position
-        else:
-            print("your next move is in the bottom right part")
-            a = int(input("ENTER A NEW POSITION: "))
-            checkMove(a)
+            return True
+        else: return False 
+
 
 
 
 def makeMove(letter, position):
+    global preMove
     if spaceIsFree(position):
-        position = checkMove(position)
+        while not checkMove(position):
+            if preMove == 1 or preMove == 4 or preMove == 7 or preMove == 28 or preMove == 31 or preMove == 34 or preMove == 55 or preMove == 58 or preMove == 61:
+                print("Your next move is in the TOP LEFT part")
+            elif preMove == 2 or preMove ==5 or preMove == 8 or preMove == 29 or preMove == 32 or preMove == 35 or preMove == 56 or preMove == 59 or preMove == 62:
+                print("Your next move is in the TOP part")
+            elif preMove == 3 or preMove == 6 or preMove == 9 or preMove == 30 or preMove == 33 or preMove == 36 or preMove == 57 or preMove == 60 or preMove == 63:
+                print("Your next move is in the TOP RIGHT part")
+            elif preMove == 10 or preMove == 13 or preMove == 16 or preMove == 37 or preMove == 40 or preMove == 43 or preMove == 64 or preMove == 67 or preMove == 70:
+                print("Your next move is in the LEFT part")
+            elif preMove == 11 or preMove == 14 or preMove == 17 or preMove == 38 or preMove == 41 or preMove == 44 or preMove == 65 or preMove == 68 or preMove == 71:
+                print("Your next move is in the MIDDLE part")
+            elif preMove == 12 or preMove == 15 or preMove == 18 or preMove == 39 or preMove == 42 or preMove == 45 or preMove == 66 or preMove == 69 or preMove == 72:
+                print("Your next move is in the RIGHT part")
+            elif preMove == 19 or preMove == 22 or preMove == 25 or preMove == 46 or preMove == 49 or preMove == 52 or preMove == 73 or preMove == 76 or preMove == 79:
+                print("Your next move is in the BOTTOM LEFT part")
+            elif preMove == 20 or preMove == 23 or preMove == 26 or preMove == 47 or preMove == 50 or preMove == 53 or preMove == 74 or preMove == 77 or preMove == 80:
+                print("Your next move is in the BOTTOM part")
+            elif preMove == 21 or preMove == 24 or preMove == 27 or preMove == 48 or preMove == 51 or preMove == 54 or preMove == 75 or preMove == 78 or preMove == 81:
+                print("Your next move is in the BOTTOM RIGHT part")
+            position = int(input("Enter again: "))
         board[position] = letter
         checkWinSmall(letter)
         printBoard(board)
@@ -135,6 +137,7 @@ def makeMove(letter, position):
             else:
                 print("player 2 WINS!")
                 exit()
+        preMove = position
         return
     else:
         print("INVALID POSITION")
@@ -441,9 +444,9 @@ def player1move():
             print("Please enter position as number")
             continue
         else:
-            print(preMove)
+            print(f"Last move: {preMove}")
             makeMove(p1, position)
-            preMove = position
+            # preMove = position
             break
 
 def player2move():
@@ -461,14 +464,28 @@ def player2move():
             print("Please enter position as number")
             continue
         else:
-            print(preMove)
+            print(f"Last move: {preMove}")
             makeMove(p2, position)
-            preMove = position
+            # preMove = position
             break
 
 
-
 printBoard(board)
+while True:
+    try:
+        print("----- ----- -----")
+        position = int(input("ENTER A POSITION FOR 'X': "))
+        print("----- ----- -----")
+    except ValueError:
+        print("Please enter position as number")
+        continue
+    else:
+        print(f"Last move: {preMove}")
+        preMove = position
+        makeMove(p1, position)
+        # preMove = position
+        break
+
 while not checkWinBig():
-    player1move()
     player2move()
+    player1move()
