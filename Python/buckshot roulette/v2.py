@@ -30,27 +30,25 @@ class shotgun():
         print("\nR E L O A D")
         time.sleep(0.5)
         print(f"\nThere are {gun.getTotalShot()} shots: {gun.getKillShot()} deadly shot(s) and {gun.getBlankShot()} blank shot(s)")
-class Player():
-    def shootOpponent(self,opponent_hp, bullet):
-        global currentBulletPosition
-        print()
-        time.sleep(0.5)
-        print("*c l a c k*")
-        time.sleep(0.5)
-        print("*c l a c k*")
-        time.sleep(1)
-        if bullet == "KILLSHOT":
-            print("\nB A N G ! !")
-            opponent_hp -= 1
-        else:
-            print("\n*P L O P*")
-            time.sleep(0.5)
-            print("\nNothing happened")
-        currentBulletPosition += 1
-        time.sleep(1)
-        return opponent_hp
+        
+    def hasBullet(self, currentBulletPosition, totalBullet):
+        if currentBulletPosition >= totalBullet: return False
+        return True
 
-    def shootYourself(self,hp, bullet):
+class Player():
+    def __init__(self, health):
+        self.hp = health
+
+
+    def getHP(self):
+        return self.hp
+
+
+    def playerGetShot(self):
+        self.hp = self.hp - 1
+
+
+    def shootOpponent(self,player, bullet):
         global currentBulletPosition
         print()
         time.sleep(0.5)
@@ -60,14 +58,32 @@ class Player():
         time.sleep(1)
         if bullet == "KILLSHOT":
             print("\nB A N G ! !")
-            hp -= 1
+            player.playerGetShot()
         else:
             print("\n*P L O P*")
             time.sleep(0.5)
             print("\nNothing happened")
         currentBulletPosition += 1
         time.sleep(1)
-        return hp
+
+
+    def shootYourself(self, player, bullet):
+        global currentBulletPosition
+        print()
+        time.sleep(0.5)
+        print("*c l a c k*")
+        time.sleep(0.5)
+        print("*c l a c k*")
+        time.sleep(1)
+        if bullet == "KILLSHOT":
+            print("\nB A N G ! !")
+            player.playerGetShot()
+        else:
+            print("\n*P L O P*")
+            time.sleep(0.5)
+            print("\nNothing happened")
+        currentBulletPosition += 1
+        time.sleep(1)
 
 
     def decision(self):
@@ -76,80 +92,65 @@ class Player():
         user = int(input("Make your move: "))
         return user
 
-def player1Move(player, next_bullet,a,currentBulletPosition):
-    global again,p1_health, p2_health, playerTurn
-    print("\n---PLAYER 1 move:")
-    decide = player.decision()
-    if decide == 1:
-        p2_health = player.shootOpponent(p2_health, next_bullet)
-        again = False
-        playerTurn = 2
-    else:
-        p1_health = player.shootYourself(p1_health, next_bullet)
-    print(f"\nplayer 1 hp: {p1_health}")
-    print(f"player 2 hp: {p2_health}")
-    print(f"Bullet Remaining: {a - currentBulletPosition -1}")
-    return
 
-def player2Move(player, next_bullet, a, currentBulletPosition):
-    global again, p1_health, p2_health, playerTurn
-    print("\n---PLAYER 2 move:")
-    decide = player.decision()
-    if decide == 1:
-        p1_health = player.shootOpponent(p1_health, next_bullet)
-        again = True
-        playerTurn = 1
-    else:
-        p2_health = player.shootYourself(p2_health,next_bullet)
-    print(f"\nplayer 1 hp: {p1_health}")
-    print(f"player 2 hp: {p2_health}")
-    print(f"Bullet Remaining: {a - currentBulletPosition -1}")
-    return
+    def playerMove(self, nextBullet, opponent, switchTurn):
+        global playerTurn
+        decide = self.decision()
+        if decide == 1:
+            p1.shootOpponent(opponent, nextBullet)
+            playerTurn = switchTurn
+        else:
+            p1.shootYourself(p1, nextBullet)
+        return
+
+def bothPlayerAlive(p1,p2):
+    if p1.getHP() > 0 and p2.getHP() > 0: return True
+    return False
+
+def showHealthBullet(p1,p2,totalBullet, currentBulletPosition):
+    print(f"\nplayer 1 hp: {p1.getHP()}")
+    print(f"player 2 hp: {p2.getHP()}")
+    print(f"Bullet Remaining: {totalBullet - currentBulletPosition}")
 
 
 # -------------------------------------------actual game here-------------------------------------------
-
+# ini the first shotgun cycle
 gun = shotgun()
 currentChamber = gun.getChamber()
 currentBulletPosition = 0
+# ini player health 
+health = round(gun.getTotalShot()/2)
+p1 = Player(health)
+p2 = Player(health)
 
-
+# announce player hp and gun shots
 print(f"\neach player has {round(gun.getTotalShot()/2)} hp")
 print("whoever out of lives first loses")
-
-p1_health = round(gun.getTotalShot()/2)
-p2_health = p1_health
-
-# p1_health = 10
-# p2_health = p1_health
-
 print(f"\nThere are {gun.getTotalShot()} shots: {gun.getKillShot()} deadly shot(s) and {gun.getBlankShot()} blank shot(s)")
 
-p1 = Player()
-p2 = Player()
-
 playerTurn = 1
-
-while p1_health > 0 and p2_health > 0:
-    a = len(currentChamber)
-    while currentBulletPosition < len(currentChamber)-1 and p1_health > 0 and p2_health > 0:
-        while p1_health > 0 and playerTurn == 1:
-            player1Move(p1, currentChamber[currentBulletPosition],a,currentBulletPosition)
-            
-
-        if currentBulletPosition > len(currentChamber)-1:
+while bothPlayerAlive(p1,p2):
+    while gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
+        while playerTurn == 1:
+            print("\n---PLAYER 1 MOVE---")
+            p1.playerMove(currentChamber[currentBulletPosition],p2, 2)
+            showHealthBullet(p1, p2, gun.getTotalShot(), currentBulletPosition)
+        
+        if not gun.hasBullet(currentBulletPosition, gun.getTotalShot()):
             break
-        while p1_health > 0 and p2_health > 0 and playerTurn == 2:
-            if currentBulletPosition > len(currentChamber)-1:
-                break
-            else:
-                player2Move(p2, currentChamber[currentBulletPosition],a,currentBulletPosition)
-
-    if currentBulletPosition > len(currentChamber)-1 and p1_health > 0 and p2_health > 0:
+        
+        while bothPlayerAlive(p1,p2) and playerTurn == 2:
+            print("\n---PLAYER 2 MOVE---")
+            p2.playerMove(currentChamber[currentBulletPosition], p1, 1)
+            showHealthBullet(p1, p2, gun.getTotalShot(), currentBulletPosition)
+    
+    if not gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
         currentBulletPosition = 0
         gun = shotgun()
         currentChamber = gun.getChamber()
         gun.reload()
+    
     else:
         break
+
 print("\nWe have a loser")
