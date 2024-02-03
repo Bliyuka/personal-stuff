@@ -131,7 +131,7 @@ print(f"\nThere are {gun.getTotalShot()} shots: {gun.getKillShot()} deadly shot(
 playerTurn = 1
 while bothPlayerAlive(p1,p2):
     while gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
-        while playerTurn == 1 gun.hasBullet(currentBulletPosition, gun.getTotalShot()):
+        while playerTurn == 1 and gun.hasBullet(currentBulletPosition, gun.getTotalShot()):
             print("\n---PLAYER 1 MOVE---")
             p1.playerMove(currentChamber[currentBulletPosition],p2, 2)
             showHealthBullet(p1, p2, gun.getTotalShot(), currentBulletPosition)
