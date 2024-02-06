@@ -18,19 +18,19 @@ def printBoard(board):
     print("======================================= +        +        +        +")
     print("| " + board[1] + " | " + board[2] + " | " + board[3] + " || " + board[4] + " | " + board[5] + " | " + board[6] + " || " + board[7] + " | " + board[8] + " | " + board[9] + " |" + "   1  2  3  4  5  6  7  8  9")
     print("|---|---|---||---|---|---||---|---|---|")
-    print("| " + board[10] + " | " + board[11] + " | " + board[12] + " || " + board[13] + " | " + board[14] + " | " + board[15] + " || " + board[16] + " | " + board[17] + " | " + board[18] + " |" + "  10 11 12 13 14 15 16 17 18")   
+    print("| " + board[10] + " | " + board[11] + " | " + board[12] + " || " + board[13] + " | " + board[14] + " | " + board[15] + " || " + board[16] + " | " + board[17] + " | " + board[18] + " |" + "  10 11 12 13 14 15 16 17 18" + "   TOP LEFT   |   TOP   |   TOP RIGHT")   
     print("|---|---|---||---|---|---||---|---|---|")
     print("| " + board[19] + " | " + board[20] + " | " + board[21] + " || " + board[22] + " | " + board[23] + " | " + board[24] + " || " + board[25] + " | " + board[26] + " | " + board[27] + " |" + "  19 20 21 22 23 24 25 26 27")   
     print("|===========||===========||===========| +        +        +        +")
     print("| " + board[28] + " | " + board[29] + " | " + board[30] + " || " + board[31] + " | " + board[32] + " | " + board[33] + " || " + board[34] + " | " + board[35] + " | " + board[36] + " |" + "  28 29 30 31 32 33 34 35 36")   
     print("|---|---|---||---|---|---||---|---|---|")
-    print("| " + board[37] + " | " + board[38] + " | " + board[39] + " || " + board[40] + " | " + board[41] + " | " + board[42] + " || " + board[43] + " | " + board[44] + " | " + board[45] + " |" + "  37 38 39 40 41 42 43 44 45")   
+    print("| " + board[37] + " | " + board[38] + " | " + board[39] + " || " + board[40] + " | " + board[41] + " | " + board[42] + " || " + board[43] + " | " + board[44] + " | " + board[45] + " |" + "  37 38 39 40 41 42 43 44 45"+ "     LEFT     |  MIDDLE  |    RIGHT")     
     print("|---|---|---||---|---|---||---|---|---|")
     print("| " + board[46] + " | " + board[47] + " | " + board[48] + " || " + board[49] + " | " + board[50] + " | " + board[51] + " || " + board[52] + " | " + board[53] + " | " + board[54] + " |" + "  46 47 48 49 50 51 52 53 54")   
     print("|===========||===========||===========| +        +        +        +")
     print("| " + board[55] + " | " + board[56] + " | " + board[57] + " || " + board[58] + " | " + board[59] + " | " + board[60] + " || " + board[61] + " | " + board[62] + " | " + board[63] + " |" + "  55 56 57 58 59 60 61 62 63")   
     print("|---|---|---||---|---|---||---|---|---|")
-    print("| " + board[64] + " | " + board[65] + " | " + board[66] + " || " + board[67] + " | " + board[68] + " | " + board[69] + " || " + board[70] + " | " + board[71] + " | " + board[72] + " |" + "  64 65 66 67 68 69 70 71 72")   
+    print("| " + board[64] + " | " + board[65] + " | " + board[66] + " || " + board[67] + " | " + board[68] + " | " + board[69] + " || " + board[70] + " | " + board[71] + " | " + board[72] + " |" + "  64 65 66 67 68 69 70 71 72"+ "   BOT LEFT   |   BOT    |   BOT RIGHT")     
     print("|---|---|---||---|---|---||---|---|---|")
     print("| " + board[73] + " | " + board[74] + " | " + board[75] + " || " + board[76] + " | " + board[77] + " | " + board[78] + " || " + board[79] + " | " + board[80] + " | " + board[81] + " |" + "  73 74 75 76 77 78 79 80 81")   
     print("======================================= +        +        +        +")
@@ -137,7 +137,14 @@ def makeMove(letter, position):
                 print("Your next move is in the BOTTOM part")
             elif preMove == 21 or preMove == 24 or preMove == 27 or preMove == 48 or preMove == 51 or preMove == 54 or preMove == 75 or preMove == 78 or preMove == 81:
                 print("Your next move is in the BOTTOM RIGHT part")
-            position = int(input("Enter again: "))
+            while True:
+                try:
+                    position = int(input("Enter again: "))
+                except ValueError:
+                    print("Please enter position as number")
+                else:
+                    break
+                
         board[position] = letter
         checkWinSmall(letter)
         printBoard(board)
@@ -425,16 +432,16 @@ def checkWinSmall(letter):
 
 def checkWinBig():
     # ngang 1
-    if board[11] == board[4] == board[27] and board[17] != ' ': return True
-    elif board[38] == board[31] == board[54] and board[44] != ' ': return True
-    elif board[65] == board[58] == board[81] and board[71] != ' ': return True
+    if board[11] == board[14] == board[17] == board[1] == board[15] == board[27] and board[17] != ' ': return True
+    elif board[38] == board[41] == board[44] == board[28] == board[51] == board[36] and board[44] != ' ': return True
+    elif board[65] == board[68] == board[71] == board[55] == board[77] == board[79] and board[71] != ' ': return True
     # doc 1
-    elif board[1] == board[30] == board[73] and board[65] != ' ': return True
-    elif board[4] == board[51] == board[76] and board[68] != ' ': return True
-    elif board[7] == board[45] == board[81] and board[71] != ' ': return True
+    elif board[11] == board[38] == board[65] == board[1] == board[30] == board[75] and board[65] != ' ': return True
+    elif board[14] == board[41] == board[68] == board[4] == board[31] == board[58] and board[68] != ' ': return True
+    elif board[17] == board[44] == board[71] == board[7] == board[34] == board[61] and board[71] != ' ': return True
     # cheo 1
-    elif board[1] == board[51] == board[72] and board[71] != ' ': return True
-    elif board[7] == board[42] == board[74] and board[65] != ' ': return True
+    elif board[11] == board[41] == board[71] == board[1] == board[31] == board[81] and board[71] != ' ': return True
+    elif board[17] == board[41] == board[65] == board[9] == board[33] == board[73] and board[65] != ' ': return True
 
 def checkDraw():
     for key in board.keys():
