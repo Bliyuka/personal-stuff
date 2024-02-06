@@ -97,10 +97,10 @@ class Player():
         global playerTurn
         decide = self.decision()
         if decide == 1:
-            p1.shootOpponent(opponent, nextBullet)
+            self.shootOpponent(opponent, nextBullet)
             playerTurn = switchTurn
         else:
-            p1.shootYourself(p1, nextBullet)
+            self.shootYourself(self, nextBullet)
         return
 
 def bothPlayerAlive(p1,p2):
