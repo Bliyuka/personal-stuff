@@ -116,6 +116,9 @@ def checkMove(position, letter):
 
 def makeMove(letter, position):
     global preMove
+    if checkDraw():
+        print("DRAW!")
+        exit()
     if spaceIsFree(position):
         while not checkMove(position, letter):
             if preMove == 0: return False
@@ -139,7 +142,7 @@ def makeMove(letter, position):
                 print("Your next move is in the BOTTOM RIGHT part")
             while True:
                 try:
-                    position = int(input("Enter again: "))
+                    position = int(input("---Enter again: "))
                 except ValueError:
                     print("Please enter position as number")
                 else:
@@ -148,9 +151,6 @@ def makeMove(letter, position):
         board[position] = letter
         checkWinSmall(letter)
         printBoard(board)
-        if checkDraw():
-            print("DRAW!")
-            exit()
         if checkWinBig():
             if letter == 'X':
                 print("player 1 WINS!")
