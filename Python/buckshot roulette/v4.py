@@ -1,5 +1,5 @@
 import random
-import time
+from time import sleep
 from collections import Counter
 
 class shotgun():
@@ -27,11 +27,11 @@ class shotgun():
     
     
     def reload(self):
-        time.sleep(0.5)
+        sleep(0.5)
         print("\n\nOut of ammo")
-        time.sleep(0.5)
+        sleep(0.5)
         print("\nR E L O A D")
-        time.sleep(0.5)
+        sleep(0.5)
         print(f"\nThere are {gun.getTotalShot()} shots: {gun.getKillShot()} deadly shot(s) and {gun.getBlankShot()} blank shot(s)")
         
     def hasBullet(self, currentBulletPosition, totalBullet):
@@ -54,60 +54,82 @@ class Player():
 
 
     def decision(self):
+        sleep(1)
         print("1) Shoot opponent")
         print("2) Shoot yourself")
         print("\n---INVENTORY---")
         self.showInv()
         print()
-        user = int(input("Make your move: "))
+        user = input("Make your move: ")
+        user = user.lower()
         return user
 
 
     def shootOpponent(self,player, bullet):
         global currentBulletPosition
         print()
-        time.sleep(0.5)
+        sleep(0.5)
         print("*c l a c k*")
-        time.sleep(0.5)
+        sleep(0.5)
         print("*c l a c k*")
-        time.sleep(1)
+        sleep(1)
         if bullet == "KILLSHOT":
             print("\nB A N G ! !")
             player.playerGetShot()
         else:
             print("\n*P L O P*")
-            time.sleep(0.5)
+            sleep(0.5)
             print("\nNothing happened")
         currentBulletPosition += 1
-        time.sleep(1)
+        sleep(1)
 
 
     def shootYourself(self, player, bullet):
         global currentBulletPosition
         print()
-        time.sleep(0.5)
+        sleep(0.5)
         print("*c l a c k*")
-        time.sleep(0.5)
+        sleep(0.5)
         print("*c l a c k*")
-        time.sleep(1)
+        sleep(1)
         if bullet == "KILLSHOT":
             print("\nB A N G ! !")
             player.playerGetShot()
         else:
             print("\n*P L O P*")
-            time.sleep(0.5)
+            sleep(0.5)
             print("\nNothing happened")
         currentBulletPosition += 1
-        time.sleep(1)
+        sleep(1)
 
     def playerMove(self, nextBullet, opponent, switchTurn):
         global playerTurn
-        decide = self.decision()
-        if decide == 1:
-            self.shootOpponent(opponent, nextBullet)
-            playerTurn = switchTurn
-        else:
-            self.shootYourself(self, nextBullet)
+        while True:
+            decide = self.decision()
+            if decide == "1":
+                self.shootOpponent(opponent, nextBullet)
+                playerTurn = switchTurn
+                break
+            elif decide == "2":
+                self.shootYourself(self, nextBullet)
+                
+            # ---------- ITEM PART------------
+            elif decide == "handcuff" or decide == "hand-cuff" or decide == "hand cuff" and self.itemAvailable("Hand-Cuff"):
+                    print("handcuff test\n")
+            elif decide == "beer" and self.itemAvailable("Beer"):
+                
+                    print("beer test\n")
+            elif decide == "mg" or decide == "magnifying glass" or decide == "glass" and self.itemAvailable("Magnifying Glass"):
+                
+                    print("glass test\n")
+            elif decide == "saw" and self.itemAvailable("Saw"):
+                
+                    print("saw test\n")
+            elif decide == "cigar" or decide == "cig" and self.itemAvailable("Cigar"):
+                
+                    print("cigar test\n")
+            else:
+                print("Enter a valid option!\n")
         return
 
 # ------------------------------------------------BOT SECTION------------------------------------------------------------
@@ -115,6 +137,7 @@ class Player():
         global playerTurn
         print("Bot's Inventory")
         self.showInv()
+        print()
         list = gun.getChamber()
         if list[-1] == "KILLSHOT":
             decide = 1
@@ -122,7 +145,7 @@ class Player():
             decide = 2
         else:
             decide = self.coinFlip()
-        time.sleep(1)
+        sleep(1)
         if decide == 1:
             print("Bot chose to shoot player")
             self.shootOpponent(opponent, nextBullet)
@@ -139,9 +162,11 @@ class Player():
 # ------------------------------------------------ITEM SECTION------------------------------------------------------------
 # give items
     def giveItem(self):
+        sleep(0.5)
         noOfItem = random.randint(1,3)
         print(f"Get {noOfItem} item(s):")
         for i in range(noOfItem):
+            sleep(0.5)
             item = random.randint(1,5)
             if item == 1:
                 self.Inventory.append("Hand-Cuff")
@@ -164,7 +189,14 @@ class Player():
         counted_items = Counter(self.Inventory)
         duplicates = {item: count for item, count in counted_items.items() if count >= 1}
         print(duplicates)
-# use item
+
+# Item check available
+    def itemAvailable(self, item):
+            if item in self.Inventory:
+                return True
+            else:
+                print("you dont have this!\n")
+                return False
 
 
 # HAND-CUFF
@@ -209,17 +241,22 @@ p2 = Player(health)
 # announce player hp and gun shots
 print(f"\neach player has {round(gun.getTotalShot()/2)} hp")
 print("whoever out of lives first loses")
+
+sleep(1)
 print(f"\nThere are {gun.getTotalShot()} shots: {gun.getKillShot()} deadly shot(s) and {gun.getBlankShot()} blank shot(s)")
 
 
 # the game begins
 playerTurn = 1
 while bothPlayerAlive(p1,p2):
+    sleep(1)
     print("\n- Player:")
     p1.giveItem()
+    sleep(1)
     print("\n- Bot:")
     p2.giveItem()
     # ---PLAYER MOVE---
+    sleep(1)
     while gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
         while playerTurn == 1 and gun.hasBullet(currentBulletPosition, gun.getTotalShot()):
             # print(gun.getChamber())
