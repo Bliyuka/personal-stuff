@@ -130,7 +130,7 @@ class Player():
             sleep(0.5)
             self.isHandcuff = False
             playerTurn = switchTurn
-        
+        gun.sawed = False
         return
 
 # ------------------------------------------------BOT SECTION------------------------------------------------------------
@@ -305,7 +305,7 @@ currentChamber = gun.getChamber()
 
 # ini player health 
 health = round(gun.getTotalShot()/2)
-p1 = Player(health, "PLAYER")
+p1 = Player(health, "NIGGA")
 p2 = Player(health, "BOT")
 
 # announce player hp and gun shots
@@ -329,7 +329,7 @@ while bothPlayerAlive(p1,p2):
     sleep(1)
     while gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
         while playerTurn == 1 and gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
-            print(gun.getChamber())
+            # print(gun.getChamber())
             print("\n---PLAYER MOVE---")
 
             p1.playerMove(currentChamber[currentBulletPosition],p2, 2, gun)
@@ -340,7 +340,7 @@ while bothPlayerAlive(p1,p2):
 
         # ---BOT MOVE---
         while bothPlayerAlive(p1,p2) and playerTurn == 2 and gun.hasBullet(currentBulletPosition, gun.getTotalShot()):
-            print(gun.getChamber())
+            # print(gun.getChamber())
             print("\n---BOT MOVE---")
             p2.botMove(currentChamber[currentBulletPosition], p1, 1, gun)
 
