@@ -1,3 +1,5 @@
+import time
+
 board = {1: ' ', 2: ' ', 3: ' ',
          4: ' ', 5: ' ', 6: ' ',
          7: ' ', 8: ' ', 9: ' '}
@@ -91,6 +93,7 @@ def playerMove():
 
 def compMove():
     print("BOT MOVES")
+    time.sleep(1)
     bestScore = -800
     bestMove = 0
     for key in board.keys():
@@ -122,7 +125,7 @@ def minimax(board, isMaximizing):
                 if score > bestScore:
                     bestScore = score
         return bestScore
-    
+
     else:
         bestScore = 800
         for key in board.keys():
