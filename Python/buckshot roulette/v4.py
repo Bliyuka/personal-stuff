@@ -57,7 +57,6 @@ class Player():
             self.hp = self.hp - 1
         else:
             self.hp = self.hp - 2
-            gun.sawed = False
 
 
     def decision(self):
@@ -88,6 +87,7 @@ class Player():
             sleep(0.5)
             print("\nNothing happened")
         currentBulletPosition += 1
+        gun.sawed = False
         sleep(1)
         showHealthBullet(p1, p2, gun.getTotalShot(), currentBulletPosition)
 
@@ -108,6 +108,7 @@ class Player():
             sleep(0.5)
             print("\nNothing happened")
         currentBulletPosition += 1
+        gun.sawed = False
         sleep(1)
         showHealthBullet(p1, p2, gun.getTotalShot(), currentBulletPosition)
 
@@ -130,7 +131,6 @@ class Player():
             sleep(0.5)
             self.isHandcuff = False
             playerTurn = switchTurn
-        gun.sawed = False
         return
 
 # ------------------------------------------------BOT SECTION------------------------------------------------------------
@@ -329,7 +329,7 @@ while bothPlayerAlive(p1,p2):
     sleep(1)
     while gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
         while playerTurn == 1 and gun.hasBullet(currentBulletPosition, gun.getTotalShot()) and bothPlayerAlive(p1,p2):
-            # print(gun.getChamber())
+            print(gun.getChamber())
             print("\n---PLAYER MOVE---")
 
             p1.playerMove(currentChamber[currentBulletPosition],p2, 2, gun)
