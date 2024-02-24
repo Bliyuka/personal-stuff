@@ -135,37 +135,76 @@ class Player():
 
 # ------------------------------------------------BOT SECTION------------------------------------------------------------
     def botMove(self, nextBullet, opponent, switchTurn, gun):
-        global playerTurn
+        global playerTurn, currentBulletPosition
+        next = "place holder"
         list = gun.getChamber()
+        lastBullet = gun.getTotalShot() - 1
         if not self.isHandcuff:
             print("Bot's Inventory")
             self.showInv()
             print()
-            if list[-1] == "KILLSHOT":
-                decide = 1
-            elif list[-1] == "BLANKSHOT":
-                decide = 2
-            else:
-                decide = self.coinFlip()
-            sleep(1)
-            if decide == 1:
-                print("Bot chose to shoot player")
-                self.shootOpponent(opponent, nextBullet, gun)
-                playerTurn = switchTurn
-            else:
-                print("Bot chose to shoot himself")
-                self.shootYourself(nextBullet, gun)
+            self.botUseItem(gun)
+
+            if gun.hasBullet(currentBulletPosition,gun.getTotalShot()):
+                if "Magnifying Glass" in self.Inventory and currentBulletPosition != lastBullet:
+                    next = self.useMG(gun)
+                    self.Inventory.remove("Magnifying Glass")
+
+                if next == "KILLSHOT":
+                    if "Hand-Cuff" in self.Inventory:
+                        print("Bot used Hand-Cuff")
+                        self.useHandcuff(opponent)
+                        self.Inventory.remove("Hand-Cuff")
+                    if "Saw" in self.Inventory:
+                        print("Bot used Saw")
+                        self.useSaw(gun)
+                        self.Inventory.remove("Saw")
+                    decide = 1
+                elif next == "BLANKSHOT":
+                    decide = 2
+                elif currentBulletPosition == lastBullet:
+                    if list[-1] == "KILLSHOT":
+                        if "Hand-Cuff" in self.Inventory:
+                            print("Bot used Hand-Cuff")
+                            self.useHandcuff(opponent)
+                            self.Inventory.remove("Hand-Cuff")
+                        if "Saw" in self.Inventory:
+                            print("Bot used Saw")
+                            self.useSaw(gun)
+                            self.Inventory.remove("Saw")
+                        decide = 1
+                    elif list[-1] == "BLANKSHOT" or next == "BLANKSHOT":
+                        decide = 2
+                else:
+                    decide = self.coinFlip()
+                sleep(1)
+                if decide == 1:
+                    print("Bot chose to shoot player")
+                    self.shootOpponent(opponent, nextBullet, gun)
+                    playerTurn = switchTurn
+                else:
+                    print("Bot chose to shoot himself")
+                    self.shootYourself(nextBullet, gun)
         else:
             print(f"{self.name} breaks out of the hand-cuff")
             sleep(0.5)
             self.isHandcuff = False
             playerTurn = switchTurn
-
+            
         return
 
-    # def botUseItem(self):
-        # for i in self.Inventory:
-            
+    def botUseItem(self, gun):
+        sleep(1)
+        for i in self.Inventory:
+            if i == "Cigar":
+                print("Bot used Cigar")
+                self.useCigar()
+                self.Inventory.remove("Cigar")
+            elif i == "Beer":
+                print("Bot used Beer")
+                self.useBeer(gun)
+                self.Inventory.remove("Beer")
+
 
     def coinFlip(self):
         return random.randint(1,2)
@@ -253,7 +292,7 @@ class Player():
 # HAND-CUFF
     def useHandcuff(self, opponent):
         opponent.isHandcuff = True
-        print(f"\n{opponent.name} got hand-cuffed\n")
+        print(f"{opponent.name} got hand-cuffed\n")
         sleep(1)
 
 # BEER
@@ -263,23 +302,24 @@ class Player():
         print(f"\n{self.name} drank a beer and pop out a gun shell")
         print(f"It was a {gun.getChamber()[currentBulletPosition]}\n")
         currentBulletPosition += 1
-        
+
 # MAGNIFYING GLASS
     def useMG(self,gun):
         global currentBulletPosition
+        print(f"{self.name} used magnifying glass")
         return gun.getChamber()[currentBulletPosition]
 # SAW
     def useSaw(self, gun):
         gun.sawed = True
         sleep(1)
-        print("You sawed off the gun")
+        print(f"{self.name} sawed off the gun")
         print("Now it deal 2 damages")
         print()
 
 # CIGAR
     def useCigar(self):
         self.hp = self.hp + 1
-        print(f"{self.name} restores 1 hp")
+        print(f"{self.name} restores 1 hp\n")
 
 
 
