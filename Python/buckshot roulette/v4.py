@@ -201,7 +201,7 @@ class Player():
 # give items
     def giveItem(self):
         sleep(0.5)
-        noOfItem = random.randint(1,3)
+        noOfItem = random.randint(1,2)
         print(f"Get {noOfItem} item(s):")
         for i in range(noOfItem):
             sleep(0.5)
@@ -309,7 +309,7 @@ class Player():
 
 # CIGAR
     def useCigar(self):
-        print(f"{self.name} used Saw")
+        print(f"{self.name} used cigar")
         self.hp = self.hp + 1
         print(f"{self.name} restores 1 hp\n")
 
