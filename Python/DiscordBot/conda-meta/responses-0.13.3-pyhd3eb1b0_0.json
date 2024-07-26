@@ -1,0 +1,129 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/anaconda/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "requests >=2.0",
+    "six",
+    "urllib3 >=1.25.10"
+  ],
+  "extracted_package_dir": "F:\\anaconda\\anaconda\\pkgs\\responses-0.13.3-pyhd3eb1b0_0",
+  "files": [
+    "Lib/site-packages/responses-0.13.3.dist-info/INSTALLER",
+    "Lib/site-packages/responses-0.13.3.dist-info/LICENSE",
+    "Lib/site-packages/responses-0.13.3.dist-info/METADATA",
+    "Lib/site-packages/responses-0.13.3.dist-info/RECORD",
+    "Lib/site-packages/responses-0.13.3.dist-info/REQUESTED",
+    "Lib/site-packages/responses-0.13.3.dist-info/WHEEL",
+    "Lib/site-packages/responses-0.13.3.dist-info/direct_url.json",
+    "Lib/site-packages/responses-0.13.3.dist-info/top_level.txt",
+    "Lib/site-packages/responses/__init__.py",
+    "Lib/site-packages/responses/test_responses.py",
+    ".nonadmin",
+    "Lib/site-packages/responses/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/responses/__pycache__/test_responses.cpython-312.pyc"
+  ],
+  "fn": "responses-0.13.3-pyhd3eb1b0_0.tar.bz2",
+  "license": "Apache 2.0",
+  "link": {
+    "source": "F:\\anaconda\\anaconda\\pkgs\\responses-0.13.3-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "77e7d78a31ad176fcc15ae56fda02c69",
+  "name": "responses",
+  "noarch": "python",
+  "package_tarball_full_path": "F:\\anaconda\\anaconda\\pkgs\\responses-0.13.3-pyhd3eb1b0_0.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "489ecb70b4447c034a10978a4b08da015c9bd9fa95ca3aeaf219d9815416a67c",
+        "sha256_in_prefix": "489ecb70b4447c034a10978a4b08da015c9bd9fa95ca3aeaf219d9815416a67c",
+        "size_in_bytes": 10835
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "489a4e8eabed0ddffc249fab386db78521b7e72049fa798cba83446aa1b87e5c",
+        "sha256_in_prefix": "489a4e8eabed0ddffc249fab386db78521b7e72049fa798cba83446aa1b87e5c",
+        "size_in_bytes": 17335
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "85f7804235411bedf1ad9facd528516411eb56e1c39d5c25e321451fcf8739dd",
+        "sha256_in_prefix": "85f7804235411bedf1ad9facd528516411eb56e1c39d5c25e321451fcf8739dd",
+        "size_in_bytes": 959
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "sha256_in_prefix": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "e7e2324eb091caa4feff7219707247d0368026379ee465aeb529f228568de3c1",
+        "sha256_in_prefix": "e7e2324eb091caa4feff7219707247d0368026379ee465aeb529f228568de3c1",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "site-packages/responses-0.13.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "6908737c2d1bab84e401a07f62bfbb72fe2ed979dcf16895cef87829d668d10a",
+        "sha256_in_prefix": "6908737c2d1bab84e401a07f62bfbb72fe2ed979dcf16895cef87829d668d10a",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "site-packages/responses/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7624cd889e7eba9060fd445f6e4f758a45f470bc04b3fd094d3812bb4ade118f",
+        "sha256_in_prefix": "7624cd889e7eba9060fd445f6e4f758a45f470bc04b3fd094d3812bb4ade118f",
+        "size_in_bytes": 26182
+      },
+      {
+        "_path": "site-packages/responses/test_responses.py",
+        "path_type": "hardlink",
+        "sha256": "1368997849fe4e41595b08fcb6d4eb2d032c937e1761a4e6265718cd9a72f02f",
+        "sha256_in_prefix": "1368997849fe4e41595b08fcb6d4eb2d032c937e1761a4e6265718cd9a72f02f",
+        "size_in_bytes": 43727
+      },
+      {
+        "_path": "Lib/site-packages/responses/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/responses/__pycache__/test_responses.cpython-312.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "anaconda::responses",
+  "sha256": "15be4530a4ea57f48d0bf4991686749699589de935524349f3ae88a0efd2d5ed",
+  "size": 25379,
+  "subdir": "noarch",
+  "timestamp": 1619800310000,
+  "url": "https://conda.anaconda.org/anaconda/noarch/responses-0.13.3-pyhd3eb1b0_0.tar.bz2",
+  "version": "0.13.3"
+}

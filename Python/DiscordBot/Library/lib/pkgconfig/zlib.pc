@@ -1,0 +1,13 @@
+prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+exec_prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+libdir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib
+sharedlibdir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib
+includedir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
