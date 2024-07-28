@@ -1,4 +1,5 @@
 from random import choice, randint
+import re
 
 def get_response(user_input: str) -> str:
     # raise NotImplementedError('code is missing...')
@@ -17,7 +18,8 @@ def get_response(user_input: str) -> str:
         return 'cuts'
     
     elif 'roll dice' in lowered:
-        return f'You rolled: {randint(1,6)}'
+        return f'{randint(1,6)}'
+        
     else:
         return choice(['huh?',
                        'đ hiểu',
@@ -25,3 +27,13 @@ def get_response(user_input: str) -> str:
                        'memaybeo',
                        'why are u gei?'])
 
+def ping(user_input: str) -> str:
+    lowered: str = user_input.lower()
+    match = re.search(r'<@(.*?)>', lowered)
+    if match:
+        user = match.group(1)
+        user = '<@' + str(user) + '>'
+        print(user)
+        return user
+    else:
+        return 'no user found'

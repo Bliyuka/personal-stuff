@@ -3,8 +3,10 @@ import os
 from dotenv import load_dotenv
 from discord import Intents, Client, Message
 import discord
-from responses import get_response
-import re
+from responses import get_response, ping
+from time import sleep
+
+pingSpam = True
 
 # STEP 0: LOAD OUR TOKEN FROM SOMEWHERE SAFE
 load_dotenv()
@@ -19,41 +21,39 @@ client: Client= Client(intents=intents)
 
 # STEP 2: MESSAGE FUNCTIONALITY
 async def send_message(message: Message, user_message: str) -> None:
+    global pingSpam
+    pingSpam = True
     if not user_message:
         print('(Message was empty bcuz intents were not enabled probably)')
         return
 
-    # is_private = user_message[0]
-    if is_private := user_message[0] == '?':
-        user_message = user_message[1:]
-    
     if user_message[0] == '+':
         user_message = user_message[1:]
-        try:
+        try: # <----- shit happen from here
             if 'ping' in user_message:
-                match = re.search(r'<@(.*?)>', user_message)
-                if match:
-                    user = match.group(1)
-                    user = '<@' + str(user) + '>'
-                    print(user)
+                if 'stop' in user_message:
+                    pingSpam = False
+                    await message.reply('ping stopped')
                 else:
-                    print('no id found')
-                    await message.channel.send("no id found")
-                    return
-                try:
-                    times = user_message.rsplit(' ', 1)[1]
-                    times = int(times)
-                    print(times)
-                except:
-                    times = 1
-                if user is None:
-                    print("User not found")
-                else: 
+                    user_ping = ping(user_message)
+                    if user_ping == 'no user found':
+                        await message.channel.send(user_ping)
+                        return
+                    
+                    try:
+                        times = int(user_message.rsplit(' ', 1)[1])
+                        if times >100: await message.channel.send('no tagging more than 100 times') 
+                        elif times <1: times = 1
+                    except:
+                        times = 1
+                        
                     for i in range(times):
-                        await message.channel.send(f"{i+1}/{times} {user}")
+                        if not pingSpam: 
+                            break
+                        await message.channel.send(f'{i+1}/{times} {user_ping}')
             else:
                 response: str = get_response(user_message)
-                await message.author.send(response) if is_private else await message.channel.send(response) 
+                await message.reply(response)
 
         except Exception as e:
             print(e)
