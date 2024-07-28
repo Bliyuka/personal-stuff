@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from discord import Intents, Client, Message
 import discord
-from responses import get_response, ping
+from responses import get_response, get_uID
 from time import sleep
 
 pingSpam = True
@@ -35,7 +35,7 @@ async def send_message(message: Message, user_message: str) -> None:
                     pingSpam = False
                     await message.reply('ping stopped')
                 else:
-                    user_ping = ping(user_message)
+                    user_ping = get_uID(user_message)
                     if user_ping == 'no user found':
                         await message.channel.send(user_ping)
                         return
