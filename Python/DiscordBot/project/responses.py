@@ -27,13 +27,14 @@ def get_response(user_input: str) -> str:
                        'memaybeo',
                        'why are u gei?'])
 
-def ping(user_input: str) -> str:
+def get_uID(user_input: str) -> str:
     lowered: str = user_input.lower()
-    match = re.search(r'<@(.*?)>', lowered)
-    if match:
-        user = match.group(1)
-        user = '<@' + str(user) + '>'
-        print(user)
+    #get user IDs as list
+    numbers = re.findall(r'<@(\d+)>', lowered) 
+    if numbers:
+        IDs = ['<@'+num+'>' for num in numbers]
+        user = ' '.join(IDs)
         return user
+    
     else:
         return 'no user found'
