@@ -8,6 +8,11 @@ def get_response(user_input: str) -> str:
     if lowered == '':
         return 'Well, you\'re awfully silent...'
     
+    elif lowered == 'help':
+        return '''+ping <@(user1)> <@(user2)> <times>: spam ping user(s) 
++mremove <times>: quick remove above message(s)
++roll dice: get a random number from 1 to 6 (will update later)'''
+    
     elif 'hello' in lowered:
         return 'Lô con cặc'
     
@@ -38,3 +43,7 @@ def get_uID(user_input: str) -> str:
     
     else:
         return 'no user found'
+
+def get_times(user_input: str) -> int:
+    return int(user_input.rsplit(' ', 1)[1])
+
