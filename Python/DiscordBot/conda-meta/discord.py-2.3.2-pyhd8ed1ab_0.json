@@ -1,0 +1,1633 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "aiohttp >=3.7.4,<4",
+    "python >=3.8"
+  ],
+  "extracted_package_dir": "F:\\anaconda\\anaconda\\pkgs\\discord.py-2.3.2-pyhd8ed1ab_0",
+  "files": [
+    "Lib/site-packages/discord.py-2.3.2.dist-info/INSTALLER",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/LICENSE",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/METADATA",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/RECORD",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/REQUESTED",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/WHEEL",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/direct_url.json",
+    "Lib/site-packages/discord.py-2.3.2.dist-info/top_level.txt",
+    "Lib/site-packages/discord/__init__.py",
+    "Lib/site-packages/discord/__main__.py",
+    "Lib/site-packages/discord/_types.py",
+    "Lib/site-packages/discord/abc.py",
+    "Lib/site-packages/discord/activity.py",
+    "Lib/site-packages/discord/app_commands/__init__.py",
+    "Lib/site-packages/discord/app_commands/checks.py",
+    "Lib/site-packages/discord/app_commands/commands.py",
+    "Lib/site-packages/discord/app_commands/errors.py",
+    "Lib/site-packages/discord/app_commands/models.py",
+    "Lib/site-packages/discord/app_commands/namespace.py",
+    "Lib/site-packages/discord/app_commands/transformers.py",
+    "Lib/site-packages/discord/app_commands/translator.py",
+    "Lib/site-packages/discord/app_commands/tree.py",
+    "Lib/site-packages/discord/appinfo.py",
+    "Lib/site-packages/discord/asset.py",
+    "Lib/site-packages/discord/audit_logs.py",
+    "Lib/site-packages/discord/automod.py",
+    "Lib/site-packages/discord/backoff.py",
+    "Lib/site-packages/discord/bin/libopus-0.x64.dll",
+    "Lib/site-packages/discord/bin/libopus-0.x86.dll",
+    "Lib/site-packages/discord/channel.py",
+    "Lib/site-packages/discord/client.py",
+    "Lib/site-packages/discord/colour.py",
+    "Lib/site-packages/discord/components.py",
+    "Lib/site-packages/discord/context_managers.py",
+    "Lib/site-packages/discord/embeds.py",
+    "Lib/site-packages/discord/emoji.py",
+    "Lib/site-packages/discord/enums.py",
+    "Lib/site-packages/discord/errors.py",
+    "Lib/site-packages/discord/ext/commands/__init__.py",
+    "Lib/site-packages/discord/ext/commands/_types.py",
+    "Lib/site-packages/discord/ext/commands/bot.py",
+    "Lib/site-packages/discord/ext/commands/cog.py",
+    "Lib/site-packages/discord/ext/commands/context.py",
+    "Lib/site-packages/discord/ext/commands/converter.py",
+    "Lib/site-packages/discord/ext/commands/cooldowns.py",
+    "Lib/site-packages/discord/ext/commands/core.py",
+    "Lib/site-packages/discord/ext/commands/errors.py",
+    "Lib/site-packages/discord/ext/commands/flags.py",
+    "Lib/site-packages/discord/ext/commands/help.py",
+    "Lib/site-packages/discord/ext/commands/hybrid.py",
+    "Lib/site-packages/discord/ext/commands/parameters.py",
+    "Lib/site-packages/discord/ext/commands/view.py",
+    "Lib/site-packages/discord/ext/tasks/__init__.py",
+    "Lib/site-packages/discord/file.py",
+    "Lib/site-packages/discord/flags.py",
+    "Lib/site-packages/discord/gateway.py",
+    "Lib/site-packages/discord/guild.py",
+    "Lib/site-packages/discord/http.py",
+    "Lib/site-packages/discord/integrations.py",
+    "Lib/site-packages/discord/interactions.py",
+    "Lib/site-packages/discord/invite.py",
+    "Lib/site-packages/discord/member.py",
+    "Lib/site-packages/discord/mentions.py",
+    "Lib/site-packages/discord/message.py",
+    "Lib/site-packages/discord/mixins.py",
+    "Lib/site-packages/discord/object.py",
+    "Lib/site-packages/discord/oggparse.py",
+    "Lib/site-packages/discord/opus.py",
+    "Lib/site-packages/discord/partial_emoji.py",
+    "Lib/site-packages/discord/permissions.py",
+    "Lib/site-packages/discord/player.py",
+    "Lib/site-packages/discord/py.typed",
+    "Lib/site-packages/discord/raw_models.py",
+    "Lib/site-packages/discord/reaction.py",
+    "Lib/site-packages/discord/role.py",
+    "Lib/site-packages/discord/scheduled_event.py",
+    "Lib/site-packages/discord/shard.py",
+    "Lib/site-packages/discord/stage_instance.py",
+    "Lib/site-packages/discord/state.py",
+    "Lib/site-packages/discord/sticker.py",
+    "Lib/site-packages/discord/team.py",
+    "Lib/site-packages/discord/template.py",
+    "Lib/site-packages/discord/threads.py",
+    "Lib/site-packages/discord/types/__init__.py",
+    "Lib/site-packages/discord/types/activity.py",
+    "Lib/site-packages/discord/types/appinfo.py",
+    "Lib/site-packages/discord/types/audit_log.py",
+    "Lib/site-packages/discord/types/automod.py",
+    "Lib/site-packages/discord/types/channel.py",
+    "Lib/site-packages/discord/types/command.py",
+    "Lib/site-packages/discord/types/components.py",
+    "Lib/site-packages/discord/types/embed.py",
+    "Lib/site-packages/discord/types/emoji.py",
+    "Lib/site-packages/discord/types/gateway.py",
+    "Lib/site-packages/discord/types/guild.py",
+    "Lib/site-packages/discord/types/integration.py",
+    "Lib/site-packages/discord/types/interactions.py",
+    "Lib/site-packages/discord/types/invite.py",
+    "Lib/site-packages/discord/types/member.py",
+    "Lib/site-packages/discord/types/message.py",
+    "Lib/site-packages/discord/types/role.py",
+    "Lib/site-packages/discord/types/scheduled_event.py",
+    "Lib/site-packages/discord/types/snowflake.py",
+    "Lib/site-packages/discord/types/sticker.py",
+    "Lib/site-packages/discord/types/team.py",
+    "Lib/site-packages/discord/types/template.py",
+    "Lib/site-packages/discord/types/threads.py",
+    "Lib/site-packages/discord/types/user.py",
+    "Lib/site-packages/discord/types/voice.py",
+    "Lib/site-packages/discord/types/webhook.py",
+    "Lib/site-packages/discord/types/welcome_screen.py",
+    "Lib/site-packages/discord/types/widget.py",
+    "Lib/site-packages/discord/ui/__init__.py",
+    "Lib/site-packages/discord/ui/button.py",
+    "Lib/site-packages/discord/ui/item.py",
+    "Lib/site-packages/discord/ui/modal.py",
+    "Lib/site-packages/discord/ui/select.py",
+    "Lib/site-packages/discord/ui/text_input.py",
+    "Lib/site-packages/discord/ui/view.py",
+    "Lib/site-packages/discord/user.py",
+    "Lib/site-packages/discord/utils.py",
+    "Lib/site-packages/discord/voice_client.py",
+    "Lib/site-packages/discord/webhook/__init__.py",
+    "Lib/site-packages/discord/webhook/async_.py",
+    "Lib/site-packages/discord/webhook/sync.py",
+    "Lib/site-packages/discord/welcome_screen.py",
+    "Lib/site-packages/discord/widget.py",
+    ".nonadmin",
+    "Lib/site-packages/discord/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/__main__.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/_types.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/abc.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/activity.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/checks.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/commands.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/errors.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/models.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/namespace.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/transformers.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/translator.cpython-312.pyc",
+    "Lib/site-packages/discord/app_commands/__pycache__/tree.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/appinfo.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/asset.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/audit_logs.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/automod.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/backoff.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/channel.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/client.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/colour.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/components.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/context_managers.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/embeds.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/emoji.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/enums.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/errors.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/_types.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/bot.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/cog.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/context.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/converter.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/cooldowns.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/core.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/errors.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/flags.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/help.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/hybrid.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/parameters.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/commands/__pycache__/view.cpython-312.pyc",
+    "Lib/site-packages/discord/ext/tasks/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/file.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/flags.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/gateway.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/guild.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/http.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/integrations.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/interactions.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/invite.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/member.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/mentions.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/message.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/mixins.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/object.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/oggparse.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/opus.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/partial_emoji.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/permissions.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/player.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/raw_models.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/reaction.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/role.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/scheduled_event.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/shard.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/stage_instance.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/state.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/sticker.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/team.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/template.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/threads.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/activity.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/appinfo.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/audit_log.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/automod.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/channel.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/command.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/components.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/embed.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/emoji.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/gateway.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/guild.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/integration.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/interactions.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/invite.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/member.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/message.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/role.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/scheduled_event.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/snowflake.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/sticker.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/team.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/template.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/threads.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/user.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/voice.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/webhook.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/welcome_screen.cpython-312.pyc",
+    "Lib/site-packages/discord/types/__pycache__/widget.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/button.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/item.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/modal.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/select.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/text_input.cpython-312.pyc",
+    "Lib/site-packages/discord/ui/__pycache__/view.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/user.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/utils.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/voice_client.cpython-312.pyc",
+    "Lib/site-packages/discord/webhook/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/discord/webhook/__pycache__/async_.cpython-312.pyc",
+    "Lib/site-packages/discord/webhook/__pycache__/sync.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/welcome_screen.cpython-312.pyc",
+    "Lib/site-packages/discord/__pycache__/widget.cpython-312.pyc"
+  ],
+  "fn": "discord.py-2.3.2-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "F:\\anaconda\\anaconda\\pkgs\\discord.py-2.3.2-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "a6dab9392321c6fd82b59e6d14c99166",
+  "name": "discord.py",
+  "noarch": "python",
+  "package_tarball_full_path": "F:\\anaconda\\anaconda\\pkgs\\discord.py-2.3.2-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "211afc787a6dc25d7739ecfd76e8f1fa9466374dbc558386896d98cdfee5127d",
+        "sha256_in_prefix": "211afc787a6dc25d7739ecfd76e8f1fa9466374dbc558386896d98cdfee5127d",
+        "size_in_bytes": 1081
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f68c96ce169be082c3abfc43090b1a1c8dfd1b2245178382b466a9fe252d09fe",
+        "sha256_in_prefix": "f68c96ce169be082c3abfc43090b1a1c8dfd1b2245178382b466a9fe252d09fe",
+        "size_in_bytes": 4859
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "fbc3a13e90003641d075bc07960926e034fa1ddf7828d4dd891e5075f606a1ce",
+        "sha256_in_prefix": "fbc3a13e90003641d075bc07960926e034fa1ddf7828d4dd891e5075f606a1ce",
+        "size_in_bytes": 16357
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "e6c5174a0f5ee1b8bb9532ce1dc9ba4046303b94c81754cd6d34951558dc25c7",
+        "sha256_in_prefix": "e6c5174a0f5ee1b8bb9532ce1dc9ba4046303b94c81754cd6d34951558dc25c7",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "bb51eea7656ca14ec01b65ac027aa937f2b1b2b579c50db31b9d5435cb64d303",
+        "sha256_in_prefix": "bb51eea7656ca14ec01b65ac027aa937f2b1b2b579c50db31b9d5435cb64d303",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "site-packages/discord.py-2.3.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "7c992b35b47effcb9b30151c0c424171f929102aef48498cacd2a0bcb9501683",
+        "sha256_in_prefix": "7c992b35b47effcb9b30151c0c424171f929102aef48498cacd2a0bcb9501683",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/discord/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ef978f01263cc1ca113c1f13c4a6c87e2f4705dbf920da87c37ed4bdf409d996",
+        "sha256_in_prefix": "ef978f01263cc1ca113c1f13c4a6c87e2f4705dbf920da87c37ed4bdf409d996",
+        "size_in_bytes": 1886
+      },
+      {
+        "_path": "site-packages/discord/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "0c47b80aa60919ee77a3126c6404155cd4505045082d7a68d6be62c29e70216f",
+        "sha256_in_prefix": "0c47b80aa60919ee77a3126c6404155cd4505045082d7a68d6be62c29e70216f",
+        "size_in_bytes": 11051
+      },
+      {
+        "_path": "site-packages/discord/_types.py",
+        "path_type": "hardlink",
+        "sha256": "6fa223f7bae7ca8f561acdea545c91436d742ec200a47ec9af7f997e6c54dbaf",
+        "sha256_in_prefix": "6fa223f7bae7ca8f561acdea545c91436d742ec200a47ec9af7f997e6c54dbaf",
+        "size_in_bytes": 1410
+      },
+      {
+        "_path": "site-packages/discord/abc.py",
+        "path_type": "hardlink",
+        "sha256": "ce1b587319f625f1bbd8c4ff77491d55089641effc5315e73b9b92272e07d54d",
+        "sha256_in_prefix": "ce1b587319f625f1bbd8c4ff77491d55089641effc5315e73b9b92272e07d54d",
+        "size_in_bytes": 65822
+      },
+      {
+        "_path": "site-packages/discord/activity.py",
+        "path_type": "hardlink",
+        "sha256": "daaf8a6a1d3f04c3abc10deae3ff0ec400aeff580f87bd7d4fd83878a11a08fb",
+        "sha256_in_prefix": "daaf8a6a1d3f04c3abc10deae3ff0ec400aeff580f87bd7d4fd83878a11a08fb",
+        "size_in_bytes": 26864
+      },
+      {
+        "_path": "site-packages/discord/app_commands/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c5a00d145dbcb227f15cefffc7a79277baf9afb523a4efad3108ab8da2a23527",
+        "sha256_in_prefix": "c5a00d145dbcb227f15cefffc7a79277baf9afb523a4efad3108ab8da2a23527",
+        "size_in_bytes": 424
+      },
+      {
+        "_path": "site-packages/discord/app_commands/checks.py",
+        "path_type": "hardlink",
+        "sha256": "674388ac7ba8607bb7784daad3996e43f3101aba920b95e1034ae8bab27db45b",
+        "sha256_in_prefix": "674388ac7ba8607bb7784daad3996e43f3101aba920b95e1034ae8bab27db45b",
+        "size_in_bytes": 18077
+      },
+      {
+        "_path": "site-packages/discord/app_commands/commands.py",
+        "path_type": "hardlink",
+        "sha256": "351d33f5b29052fc86af9e633465a808986a4c9c1e5e62b788d94da09ed85bf0",
+        "sha256_in_prefix": "351d33f5b29052fc86af9e633465a808986a4c9c1e5e62b788d94da09ed85bf0",
+        "size_in_bytes": 94536
+      },
+      {
+        "_path": "site-packages/discord/app_commands/errors.py",
+        "path_type": "hardlink",
+        "sha256": "c94dd16fbed4a0a8d04c89e74ed3e5abaa2c067a092cadcbfc5adc9c00f79d1e",
+        "sha256_in_prefix": "c94dd16fbed4a0a8d04c89e74ed3e5abaa2c067a092cadcbfc5adc9c00f79d1e",
+        "size_in_bytes": 19006
+      },
+      {
+        "_path": "site-packages/discord/app_commands/models.py",
+        "path_type": "hardlink",
+        "sha256": "6e53df25e2e67b3fb52defe6690d5288677bf4a7cd305d28a113c05b5cec7c54",
+        "sha256_in_prefix": "6e53df25e2e67b3fb52defe6690d5288677bf4a7cd305d28a113c05b5cec7c54",
+        "size_in_bytes": 38502
+      },
+      {
+        "_path": "site-packages/discord/app_commands/namespace.py",
+        "path_type": "hardlink",
+        "sha256": "a0d7e640f3436df5b7b9319a74e3b0f05fd7f3bdab5f8faa345611f1984300ac",
+        "sha256_in_prefix": "a0d7e640f3436df5b7b9319a74e3b0f05fd7f3bdab5f8faa345611f1984300ac",
+        "size_in_bytes": 13123
+      },
+      {
+        "_path": "site-packages/discord/app_commands/transformers.py",
+        "path_type": "hardlink",
+        "sha256": "f223f7029762b115df8b00211304b4930ca07859feb15aed800f95804c12ffb5",
+        "sha256_in_prefix": "f223f7029762b115df8b00211304b4930ca07859feb15aed800f95804c12ffb5",
+        "size_in_bytes": 32512
+      },
+      {
+        "_path": "site-packages/discord/app_commands/translator.py",
+        "path_type": "hardlink",
+        "sha256": "9bd10d0ceec6182257892ba1082bd78b58d6e1c70738110cd0793daa8992e88d",
+        "sha256_in_prefix": "9bd10d0ceec6182257892ba1082bd78b58d6e1c70738110cd0793daa8992e88d",
+        "size_in_bytes": 10686
+      },
+      {
+        "_path": "site-packages/discord/app_commands/tree.py",
+        "path_type": "hardlink",
+        "sha256": "be1c11ade0c43eaafba2d77f355cf4e9cd1c89d5b5e7f457901948fb39028ac8",
+        "sha256_in_prefix": "be1c11ade0c43eaafba2d77f355cf4e9cd1c89d5b5e7f457901948fb39028ac8",
+        "size_in_bytes": 47965
+      },
+      {
+        "_path": "site-packages/discord/appinfo.py",
+        "path_type": "hardlink",
+        "sha256": "e18f97a85c4eb81feba0371e41c50d46cd1fdc1a20687c8eb8eb669a50763138",
+        "sha256_in_prefix": "e18f97a85c4eb81feba0371e41c50d46cd1fdc1a20687c8eb8eb669a50763138",
+        "size_in_bytes": 12713
+      },
+      {
+        "_path": "site-packages/discord/asset.py",
+        "path_type": "hardlink",
+        "sha256": "4ae64143d9a0cf4f76cd4a577a6da0728d1638e00e896f692695a96df26db142",
+        "sha256_in_prefix": "4ae64143d9a0cf4f76cd4a577a6da0728d1638e00e896f692695a96df26db142",
+        "size_in_bytes": 15837
+      },
+      {
+        "_path": "site-packages/discord/audit_logs.py",
+        "path_type": "hardlink",
+        "sha256": "a4519483da0a9de307059d42258e9c7b0591297a6067bd96726313ca4d681a0b",
+        "sha256_in_prefix": "a4519483da0a9de307059d42258e9c7b0591297a6067bd96726313ca4d681a0b",
+        "size_in_bytes": 35367
+      },
+      {
+        "_path": "site-packages/discord/automod.py",
+        "path_type": "hardlink",
+        "sha256": "6cc2bdb65a02034894d0248aa4fc158a4a22d347ab232c4171026764bcaafebd",
+        "sha256_in_prefix": "6cc2bdb65a02034894d0248aa4fc158a4a22d347ab232c4171026764bcaafebd",
+        "size_in_bytes": 23833
+      },
+      {
+        "_path": "site-packages/discord/backoff.py",
+        "path_type": "hardlink",
+        "sha256": "df2434b896d0de28fb4e6773bfb19d86a7c78db3553b879307712ed150b1baf3",
+        "sha256_in_prefix": "df2434b896d0de28fb4e6773bfb19d86a7c78db3553b879307712ed150b1baf3",
+        "size_in_bytes": 3751
+      },
+      {
+        "_path": "site-packages/discord/bin/libopus-0.x64.dll",
+        "path_type": "hardlink",
+        "sha256": "c84da836e8d92421ac305842cfe5a724898ed09d340d46b129e210bdc9448131",
+        "sha256_in_prefix": "c84da836e8d92421ac305842cfe5a724898ed09d340d46b129e210bdc9448131",
+        "size_in_bytes": 441856
+      },
+      {
+        "_path": "site-packages/discord/bin/libopus-0.x86.dll",
+        "path_type": "hardlink",
+        "sha256": "3b5bfe12950f35043ed75d2b6fa902c936d67a507160bf76358d67c76c1dbde8",
+        "sha256_in_prefix": "3b5bfe12950f35043ed75d2b6fa902c936d67a507160bf76358d67c76c1dbde8",
+        "size_in_bytes": 366080
+      },
+      {
+        "_path": "site-packages/discord/channel.py",
+        "path_type": "hardlink",
+        "sha256": "c666f5a09e22e80c088a24f51e611f02436ad0b6a0c942bca5181e32481c2e90",
+        "sha256_in_prefix": "c666f5a09e22e80c088a24f51e611f02436ad0b6a0c942bca5181e32481c2e90",
+        "size_in_bytes": 116803
+      },
+      {
+        "_path": "site-packages/discord/client.py",
+        "path_type": "hardlink",
+        "sha256": "8614fc1c277198cec49093888ec74db3fe60b1fec0d073f0d8012df5b0c70cae",
+        "sha256_in_prefix": "8614fc1c277198cec49093888ec74db3fe60b1fec0d073f0d8012df5b0c70cae",
+        "size_in_bytes": 85400
+      },
+      {
+        "_path": "site-packages/discord/colour.py",
+        "path_type": "hardlink",
+        "sha256": "97cf93b8861337068319d2112f08c7347b0c8ea8cd97fa49f91b1c1e45c97033",
+        "sha256_in_prefix": "97cf93b8861337068319d2112f08c7347b0c8ea8cd97fa49f91b1c1e45c97033",
+        "size_in_bytes": 14403
+      },
+      {
+        "_path": "site-packages/discord/components.py",
+        "path_type": "hardlink",
+        "sha256": "d64a32207c8e54b29db1ddedad26323c0437ef33a7ec83026c506c6cebb89b3e",
+        "sha256_in_prefix": "d64a32207c8e54b29db1ddedad26323c0437ef33a7ec83026c506c6cebb89b3e",
+        "size_in_bytes": 16850
+      },
+      {
+        "_path": "site-packages/discord/context_managers.py",
+        "path_type": "hardlink",
+        "sha256": "865a1a1000212dc0c1f907f2a023c4a47fefb1cdf2e162ecd548ecdf9dad2db4",
+        "sha256_in_prefix": "865a1a1000212dc0c1f907f2a023c4a47fefb1cdf2e162ecd548ecdf9dad2db4",
+        "size_in_bytes": 3032
+      },
+      {
+        "_path": "site-packages/discord/embeds.py",
+        "path_type": "hardlink",
+        "sha256": "b228e714d9bce0a0a8a3f2143d4502d5bcd7d485b231f3dc04f15716872ae748",
+        "sha256_in_prefix": "b228e714d9bce0a0a8a3f2143d4502d5bcd7d485b231f3dc04f15716872ae748",
+        "size_in_bytes": 22722
+      },
+      {
+        "_path": "site-packages/discord/emoji.py",
+        "path_type": "hardlink",
+        "sha256": "b9c26eccd21f01bbc305ff10c45ac3e11c95c310c6091ca5ed9aff416239651a",
+        "sha256_in_prefix": "b9c26eccd21f01bbc305ff10c45ac3e11c95c310c6091ca5ed9aff416239651a",
+        "size_in_bytes": 8574
+      },
+      {
+        "_path": "site-packages/discord/enums.py",
+        "path_type": "hardlink",
+        "sha256": "804ac5913627bdfc04f8468e1507cc4fd90066108b638f878f752dfa078da5f4",
+        "sha256_in_prefix": "804ac5913627bdfc04f8468e1507cc4fd90066108b638f878f752dfa078da5f4",
+        "size_in_bytes": 22242
+      },
+      {
+        "_path": "site-packages/discord/errors.py",
+        "path_type": "hardlink",
+        "sha256": "874047869f948e8593be8c6a94b8ed3b388cf67c55151f2a30766612df26e687",
+        "sha256_in_prefix": "874047869f948e8593be8c6a94b8ed3b388cf67c55151f2a30766612df26e687",
+        "size_in_bytes": 8952
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "6503ef029ca582a0b4eeaae3f340c3913e036ddee3fce572e57c384626192517",
+        "sha256_in_prefix": "6503ef029ca582a0b4eeaae3f340c3913e036ddee3fce572e57c384626192517",
+        "size_in_bytes": 437
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/_types.py",
+        "path_type": "hardlink",
+        "sha256": "50b2f2194ea72dc2137e74bec93ae5454d0ddded335c44e8db0f1d05628cadfe",
+        "sha256_in_prefix": "50b2f2194ea72dc2137e74bec93ae5454d0ddded335c44e8db0f1d05628cadfe",
+        "size_in_bytes": 2638
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/bot.py",
+        "path_type": "hardlink",
+        "sha256": "deee7b553103eb49b02ab46677c787e46a205992cc7cd03dd2a2a1ea83e1b470",
+        "sha256_in_prefix": "deee7b553103eb49b02ab46677c787e46a205992cc7cd03dd2a2a1ea83e1b470",
+        "size_in_bytes": 51719
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/cog.py",
+        "path_type": "hardlink",
+        "sha256": "e787f98ff23e7d4df4cc563e7318a7ff1dec1dfb128e7b66ff0fdaadb86c8972",
+        "sha256_in_prefix": "e787f98ff23e7d4df4cc563e7318a7ff1dec1dfb128e7b66ff0fdaadb86c8972",
+        "size_in_bytes": 30245
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/context.py",
+        "path_type": "hardlink",
+        "sha256": "d9c2510e1ca772ed4d214446ba6b74a28dc630deb810ca2a7f625613f8f91730",
+        "sha256_in_prefix": "d9c2510e1ca772ed4d214446ba6b74a28dc630deb810ca2a7f625613f8f91730",
+        "size_in_bytes": 40048
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/converter.py",
+        "path_type": "hardlink",
+        "sha256": "9492312c35f19f054774041fb8cdc944e831a65cad3c679d5bd2ed1511979527",
+        "sha256_in_prefix": "9492312c35f19f054774041fb8cdc944e831a65cad3c679d5bd2ed1511979527",
+        "size_in_bytes": 46172
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/cooldowns.py",
+        "path_type": "hardlink",
+        "sha256": "d13ac80530d82f3d8f855c7bc84f510cda0210d15194b0c4c357bc9ef69b9b59",
+        "sha256_in_prefix": "d13ac80530d82f3d8f855c7bc84f510cda0210d15194b0c4c357bc9ef69b9b59",
+        "size_in_bytes": 9716
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/core.py",
+        "path_type": "hardlink",
+        "sha256": "28c3d2a227152df0a85fdefbd416c7818a8e57369250a40c93d8147d00686cf6",
+        "sha256_in_prefix": "28c3d2a227152df0a85fdefbd416c7818a8e57369250a40c93d8147d00686cf6",
+        "size_in_bytes": 89619
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/errors.py",
+        "path_type": "hardlink",
+        "sha256": "650276b25a771d5507dda5af394d622cb571a710352ec8d03a32938fd99d9844",
+        "sha256_in_prefix": "650276b25a771d5507dda5af394d622cb571a710352ec8d03a32938fd99d9844",
+        "size_in_bytes": 36450
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/flags.py",
+        "path_type": "hardlink",
+        "sha256": "d4b6aa23dcff967c65dfcd16d531c783eb64eed6b486dd3f80f58f1667450e36",
+        "sha256_in_prefix": "d4b6aa23dcff967c65dfcd16d531c783eb64eed6b486dd3f80f58f1667450e36",
+        "size_in_bytes": 22966
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/help.py",
+        "path_type": "hardlink",
+        "sha256": "4277dbcbc650e9114a3f7d4a80fe209367aad1ef2c49b370779e3cb007503c72",
+        "sha256_in_prefix": "4277dbcbc650e9114a3f7d4a80fe209367aad1ef2c49b370779e3cb007503c72",
+        "size_in_bytes": 57873
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/hybrid.py",
+        "path_type": "hardlink",
+        "sha256": "d059af4fbc68bc926de6d1249d57a56790f18b78aef40dc2a8331fb4108d577d",
+        "sha256_in_prefix": "d059af4fbc68bc926de6d1249d57a56790f18b78aef40dc2a8331fb4108d577d",
+        "size_in_bytes": 36595
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/parameters.py",
+        "path_type": "hardlink",
+        "sha256": "dce529cdb96307a18b6b3bd6e7546ad579556c41a2582f81b1f8e4dff456e3ee",
+        "sha256_in_prefix": "dce529cdb96307a18b6b3bd6e7546ad579556c41a2582f81b1f8e4dff456e3ee",
+        "size_in_bytes": 9295
+      },
+      {
+        "_path": "site-packages/discord/ext/commands/view.py",
+        "path_type": "hardlink",
+        "sha256": "97045599d5c4913232ccb2da72bed6cfa8c5634b3b2846f3b85833c7c5a08e88",
+        "sha256_in_prefix": "97045599d5c4913232ccb2da72bed6cfa8c5634b3b2846f3b85833c7c5a08e88",
+        "size_in_bytes": 6247
+      },
+      {
+        "_path": "site-packages/discord/ext/tasks/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "477de0a6da6f0bad7a73d73c2f9d9f2834e5ef7c38ff660d590bcca25c8f09c3",
+        "sha256_in_prefix": "477de0a6da6f0bad7a73d73c2f9d9f2834e5ef7c38ff660d590bcca25c8f09c3",
+        "size_in_bytes": 29180
+      },
+      {
+        "_path": "site-packages/discord/file.py",
+        "path_type": "hardlink",
+        "sha256": "61e352d5c51995c9cc9f1e9098f8e94fbc13ee1f215ce6b5d53d61cfc729af46",
+        "sha256_in_prefix": "61e352d5c51995c9cc9f1e9098f8e94fbc13ee1f215ce6b5d53d61cfc729af46",
+        "size_in_bytes": 5378
+      },
+      {
+        "_path": "site-packages/discord/flags.py",
+        "path_type": "hardlink",
+        "sha256": "ad179f3b5191061bd6d3f943c31c254a37def55c2962af23ff3f668e4f042911",
+        "sha256_in_prefix": "ad179f3b5191061bd6d3f943c31c254a37def55c2962af23ff3f668e4f042911",
+        "size_in_bytes": 54264
+      },
+      {
+        "_path": "site-packages/discord/gateway.py",
+        "path_type": "hardlink",
+        "sha256": "1bf9e0517e428965392413c312545fe322c7c4a826cca3478216dab2f2b42f74",
+        "sha256_in_prefix": "1bf9e0517e428965392413c312545fe322c7c4a826cca3478216dab2f2b42f74",
+        "size_in_bytes": 35191
+      },
+      {
+        "_path": "site-packages/discord/guild.py",
+        "path_type": "hardlink",
+        "sha256": "6c11863fae2223f6b0d3f10feb55642d072c36ca09a8850d5d0246979d0b2f7d",
+        "sha256_in_prefix": "6c11863fae2223f6b0d3f10feb55642d072c36ca09a8850d5d0246979d0b2f7d",
+        "size_in_bytes": 150337
+      },
+      {
+        "_path": "site-packages/discord/http.py",
+        "path_type": "hardlink",
+        "sha256": "3c8ebcbc50b77b3de9f1bfe12634a12567a32e343cf8e4cf1799cea9d95a954f",
+        "sha256_in_prefix": "3c8ebcbc50b77b3de9f1bfe12634a12567a32e343cf8e4cf1799cea9d95a954f",
+        "size_in_bytes": 90056
+      },
+      {
+        "_path": "site-packages/discord/integrations.py",
+        "path_type": "hardlink",
+        "sha256": "3f6b3d363c9686571d42cdc8711ad576beb01e6095b33c174a585736753f0849",
+        "sha256_in_prefix": "3f6b3d363c9686571d42cdc8711ad576beb01e6095b33c174a585736753f0849",
+        "size_in_bytes": 13334
+      },
+      {
+        "_path": "site-packages/discord/interactions.py",
+        "path_type": "hardlink",
+        "sha256": "388446ff95dc7952a5e763ad8880b32344ad5a69144ffa6f7502c4bd5a0d4c5b",
+        "sha256_in_prefix": "388446ff95dc7952a5e763ad8880b32344ad5a69144ffa6f7502c4bd5a0d4c5b",
+        "size_in_bytes": 45246
+      },
+      {
+        "_path": "site-packages/discord/invite.py",
+        "path_type": "hardlink",
+        "sha256": "7d12b651b0b00282d8f264c209385939fb1a09b302eb2337a1fd9db305c6f70d",
+        "sha256_in_prefix": "7d12b651b0b00282d8f264c209385939fb1a09b302eb2337a1fd9db305c6f70d",
+        "size_in_bytes": 20595
+      },
+      {
+        "_path": "site-packages/discord/member.py",
+        "path_type": "hardlink",
+        "sha256": "c6a74480db9a6934d63c13bd7bb60047128cc6579536f84bb7244c2a7c0a184d",
+        "sha256_in_prefix": "c6a74480db9a6934d63c13bd7bb60047128cc6579536f84bb7244c2a7c0a184d",
+        "size_in_bytes": 41018
+      },
+      {
+        "_path": "site-packages/discord/mentions.py",
+        "path_type": "hardlink",
+        "sha256": "d83644fd4876b032287b1b7af9b01791dc960234554805771ab318c4a1482f5e",
+        "sha256_in_prefix": "d83644fd4876b032287b1b7af9b01791dc960234554805771ab318c4a1482f5e",
+        "size_in_bytes": 5592
+      },
+      {
+        "_path": "site-packages/discord/message.py",
+        "path_type": "hardlink",
+        "sha256": "2d9bf6c1cfd78eb610b83ef04e19df7e7bcb96b6263c14d29782574709be4018",
+        "sha256_in_prefix": "2d9bf6c1cfd78eb610b83ef04e19df7e7bcb96b6263c14d29782574709be4018",
+        "size_in_bytes": 85375
+      },
+      {
+        "_path": "site-packages/discord/mixins.py",
+        "path_type": "hardlink",
+        "sha256": "fe628139f76140a370955c769b88db2663afb56c64b9648111b9e1c4d0dde2aa",
+        "sha256_in_prefix": "fe628139f76140a370955c769b88db2663afb56c64b9648111b9e1c4d0dde2aa",
+        "size_in_bytes": 1485
+      },
+      {
+        "_path": "site-packages/discord/object.py",
+        "path_type": "hardlink",
+        "sha256": "2876b0e1404e81cc3be26fae5c8f6e53799b6b6c0022010a79a3f99f6bae2ac4",
+        "sha256_in_prefix": "2876b0e1404e81cc3be26fae5c8f6e53799b6b6c0022010a79a3f99f6bae2ac4",
+        "size_in_bytes": 3702
+      },
+      {
+        "_path": "site-packages/discord/oggparse.py",
+        "path_type": "hardlink",
+        "sha256": "17fc231910b64d67aad2d325b4dba48af5923fe61474ff160083b2fa856a3665",
+        "sha256_in_prefix": "17fc231910b64d67aad2d325b4dba48af5923fe61474ff160083b2fa856a3665",
+        "size_in_bytes": 3646
+      },
+      {
+        "_path": "site-packages/discord/opus.py",
+        "path_type": "hardlink",
+        "sha256": "cdf7907cc02f1fbcd1bba32cbb8d93872f4f32d2e6f08748a90937ca04c0b498",
+        "sha256_in_prefix": "cdf7907cc02f1fbcd1bba32cbb8d93872f4f32d2e6f08748a90937ca04c0b498",
+        "size_in_bytes": 15233
+      },
+      {
+        "_path": "site-packages/discord/partial_emoji.py",
+        "path_type": "hardlink",
+        "sha256": "3adb12fb360dca4d9bbfe65ea59e33e11480c59e3477c7900ec8a86faffe3a6d",
+        "sha256_in_prefix": "3adb12fb360dca4d9bbfe65ea59e33e11480c59e3477c7900ec8a86faffe3a6d",
+        "size_in_bytes": 7954
+      },
+      {
+        "_path": "site-packages/discord/permissions.py",
+        "path_type": "hardlink",
+        "sha256": "f4b31d874bb9b7e8f51562cc7f505c666067764647c18dab9d9a8d987f2306b7",
+        "sha256_in_prefix": "f4b31d874bb9b7e8f51562cc7f505c666067764647c18dab9d9a8d987f2306b7",
+        "size_in_bytes": 30153
+      },
+      {
+        "_path": "site-packages/discord/player.py",
+        "path_type": "hardlink",
+        "sha256": "44d0dc6961a5d3fe2b42f4c24124909a73307538d031f14143691f0f83e279fd",
+        "sha256_in_prefix": "44d0dc6961a5d3fe2b42f4c24124909a73307538d031f14143691f0f83e279fd",
+        "size_in_bytes": 26498
+      },
+      {
+        "_path": "site-packages/discord/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/discord/raw_models.py",
+        "path_type": "hardlink",
+        "sha256": "f5a09730511b06211751e279bb51a4ae4d961f43059f70c8f8d13698a1ea9923",
+        "sha256_in_prefix": "f5a09730511b06211751e279bb51a4ae4d961f43059f70c8f8d13698a1ea9923",
+        "size_in_bytes": 16826
+      },
+      {
+        "_path": "site-packages/discord/reaction.py",
+        "path_type": "hardlink",
+        "sha256": "e4b11c8e4de2df7b1d04217a979e3017dd38ef73b28ee354ed2041cc9036b44d",
+        "sha256_in_prefix": "e4b11c8e4de2df7b1d04217a979e3017dd38ef73b28ee354ed2041cc9036b44d",
+        "size_in_bytes": 8207
+      },
+      {
+        "_path": "site-packages/discord/role.py",
+        "path_type": "hardlink",
+        "sha256": "c72cd82b554922b3ff2c071e9baf17a8eca57e9f19682b2bb193816ca10efde2",
+        "sha256_in_prefix": "c72cd82b554922b3ff2c071e9baf17a8eca57e9f19682b2bb193816ca10efde2",
+        "size_in_bytes": 17906
+      },
+      {
+        "_path": "site-packages/discord/scheduled_event.py",
+        "path_type": "hardlink",
+        "sha256": "ac276e2b22b71da106c465cce95258be2839d9542ccba45e5aa205b8e7bc123f",
+        "sha256_in_prefix": "ac276e2b22b71da106c465cce95258be2839d9542ccba45e5aa205b8e7bc123f",
+        "size_in_bytes": 23629
+      },
+      {
+        "_path": "site-packages/discord/shard.py",
+        "path_type": "hardlink",
+        "sha256": "2d5eb414ec459bafbf10dd1f2c38231993c1a5abcee9cf183763f23eb1ad7d52",
+        "sha256_in_prefix": "2d5eb414ec459bafbf10dd1f2c38231993c1a5abcee9cf183763f23eb1ad7d52",
+        "size_in_bytes": 20399
+      },
+      {
+        "_path": "site-packages/discord/stage_instance.py",
+        "path_type": "hardlink",
+        "sha256": "4c18977c8a1a30a7a60d92e3fc5cbb8250e8e269ebb49bbbdf93b971ab5533b7",
+        "sha256_in_prefix": "4c18977c8a1a30a7a60d92e3fc5cbb8250e8e269ebb49bbbdf93b971ab5533b7",
+        "size_in_bytes": 6498
+      },
+      {
+        "_path": "site-packages/discord/state.py",
+        "path_type": "hardlink",
+        "sha256": "f540e7ff321733272cbc130a2df84f2649a7eba999d1eff54273252da055c271",
+        "sha256_in_prefix": "f540e7ff321733272cbc130a2df84f2649a7eba999d1eff54273252da055c271",
+        "size_in_bytes": 73376
+      },
+      {
+        "_path": "site-packages/discord/sticker.py",
+        "path_type": "hardlink",
+        "sha256": "462ab054053971f10093ceffcc9a33a16265135fd2254d5c97d99029ec6bf231",
+        "sha256_in_prefix": "462ab054053971f10093ceffcc9a33a16265135fd2254d5c97d99029ec6bf231",
+        "size_in_bytes": 16039
+      },
+      {
+        "_path": "site-packages/discord/team.py",
+        "path_type": "hardlink",
+        "sha256": "1a3ea62f47758c8b8eddd5f724c423cb23f37a53ee3206d83fbc2f08e915c771",
+        "sha256_in_prefix": "1a3ea62f47758c8b8eddd5f724c423cb23f37a53ee3206d83fbc2f08e915c771",
+        "size_in_bytes": 4792
+      },
+      {
+        "_path": "site-packages/discord/template.py",
+        "path_type": "hardlink",
+        "sha256": "865c52c2adf9ff067c6a700db38692b42cc375034c974404d2a640e1b86be985",
+        "sha256_in_prefix": "865c52c2adf9ff067c6a700db38692b42cc375034c974404d2a640e1b86be985",
+        "size_in_bytes": 9574
+      },
+      {
+        "_path": "site-packages/discord/threads.py",
+        "path_type": "hardlink",
+        "sha256": "f9203f8fc8343f8b510eadd9d791d7dbeb2349e5655ca1b32c3dd23afff893c4",
+        "sha256_in_prefix": "f9203f8fc8343f8b510eadd9d791d7dbeb2349e5655ca1b32c3dd23afff893c4",
+        "size_in_bytes": 32456
+      },
+      {
+        "_path": "site-packages/discord/types/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ee44fa84b68388c570b89be9e0eb34f24c6abbd6f15f762bf4515c38661de984",
+        "sha256_in_prefix": "ee44fa84b68388c570b89be9e0eb34f24c6abbd6f15f762bf4515c38661de984",
+        "size_in_bytes": 149
+      },
+      {
+        "_path": "site-packages/discord/types/activity.py",
+        "path_type": "hardlink",
+        "sha256": "93bb6aa75d66fedefb2eef43e53f2900cc3576741cb3b0ad2c9e4d57ee028334",
+        "sha256_in_prefix": "93bb6aa75d66fedefb2eef43e53f2900cc3576741cb3b0ad2c9e4d57ee028334",
+        "size_in_bytes": 2707
+      },
+      {
+        "_path": "site-packages/discord/types/appinfo.py",
+        "path_type": "hardlink",
+        "sha256": "7b48c0e0e5319232b8dfdfad4a1c595b3aabd48871f0dcfa50b84661811c6fa9",
+        "sha256_in_prefix": "7b48c0e0e5319232b8dfdfad4a1c595b3aabd48871f0dcfa50b84661811c6fa9",
+        "size_in_bytes": 2487
+      },
+      {
+        "_path": "site-packages/discord/types/audit_log.py",
+        "path_type": "hardlink",
+        "sha256": "703f0211b0bb6f005825dac1494e89b87a3affdb16ea5ec543866719dada64b8",
+        "sha256_in_prefix": "703f0211b0bb6f005825dac1494e89b87a3affdb16ea5ec543866719dada64b8",
+        "size_in_bytes": 8192
+      },
+      {
+        "_path": "site-packages/discord/types/automod.py",
+        "path_type": "hardlink",
+        "sha256": "27175629fd9ebe714eb8e6dcc67222d102b31a93ce5ac98a131d674493b0bd0b",
+        "sha256_in_prefix": "27175629fd9ebe714eb8e6dcc67222d102b31a93ce5ac98a131d674493b0bd0b",
+        "size_in_bytes": 4009
+      },
+      {
+        "_path": "site-packages/discord/types/channel.py",
+        "path_type": "hardlink",
+        "sha256": "2c71cb1814290e3bb5d38df10c58f1852e6c8417672e7c9084d871664f4f895b",
+        "sha256_in_prefix": "2c71cb1814290e3bb5d38df10c58f1852e6c8417672e7c9084d871664f4f895b",
+        "size_in_bytes": 4804
+      },
+      {
+        "_path": "site-packages/discord/types/command.py",
+        "path_type": "hardlink",
+        "sha256": "d6170da1351c266a50cb6f482dc7af412c53f17da7c429e0c2e6ec855760b722",
+        "sha256_in_prefix": "d6170da1351c266a50cb6f482dc7af412c53f17da7c429e0c2e6ec855760b722",
+        "size_in_bytes": 6266
+      },
+      {
+        "_path": "site-packages/discord/types/components.py",
+        "path_type": "hardlink",
+        "sha256": "6f6edc2020d54b15f11f369d2bbafcb22a439f87c8e540a59f68cfb37dd729ed",
+        "sha256_in_prefix": "6f6edc2020d54b15f11f369d2bbafcb22a439f87c8e540a59f68cfb37dd729ed",
+        "size_in_bytes": 3057
+      },
+      {
+        "_path": "site-packages/discord/types/embed.py",
+        "path_type": "hardlink",
+        "sha256": "56761266a8cf2185c0180f3b3fe2618d7b3f98686cc1a32939df359b317988f7",
+        "sha256_in_prefix": "56761266a8cf2185c0180f3b3fe2618d7b3f98686cc1a32939df359b317988f7",
+        "size_in_bytes": 2329
+      },
+      {
+        "_path": "site-packages/discord/types/emoji.py",
+        "path_type": "hardlink",
+        "sha256": "25fc11ce172ceca44b295b65f1b0abbdb8014e5f56c3c31ba0da147047f61243",
+        "sha256_in_prefix": "25fc11ce172ceca44b295b65f1b0abbdb8014e5f56c3c31ba0da147047f61243",
+        "size_in_bytes": 1528
+      },
+      {
+        "_path": "site-packages/discord/types/gateway.py",
+        "path_type": "hardlink",
+        "sha256": "4a8f035aa12a564aab9616d3487ad84ce7327d4363471dc288b567dac47dc99e",
+        "sha256_in_prefix": "4a8f035aa12a564aab9616d3487ad84ce7327d4363471dc288b567dac47dc99e",
+        "size_in_bytes": 8453
+      },
+      {
+        "_path": "site-packages/discord/types/guild.py",
+        "path_type": "hardlink",
+        "sha256": "2a2900af25845f3fdcaa1c3565c98cf8783b532b48d5580fb303d12c4a50481d",
+        "sha256_in_prefix": "2a2900af25845f3fdcaa1c3565c98cf8783b532b48d5580fb303d12c4a50481d",
+        "size_in_bytes": 5279
+      },
+      {
+        "_path": "site-packages/discord/types/integration.py",
+        "path_type": "hardlink",
+        "sha256": "f07538f0b361af87aa5c1cce9226f76b9cc47f1835aef3935a9d4878444da67c",
+        "sha256_in_prefix": "f07538f0b361af87aa5c1cce9226f76b9cc47f1835aef3935a9d4878444da67c",
+        "size_in_bytes": 2288
+      },
+      {
+        "_path": "site-packages/discord/types/interactions.py",
+        "path_type": "hardlink",
+        "sha256": "d15bf0b9ca2ea579820f4406535b41013d71ce55dc68c4addfc879fc71b78274",
+        "sha256_in_prefix": "d15bf0b9ca2ea579820f4406535b41013d71ce55dc68c4addfc879fc71b78274",
+        "size_in_bytes": 7046
+      },
+      {
+        "_path": "site-packages/discord/types/invite.py",
+        "path_type": "hardlink",
+        "sha256": "b0b9af5f4226c39aad57e87bf016157fddbc4346087c6595bb3f57c58f02b6a8",
+        "sha256_in_prefix": "b0b9af5f4226c39aad57e87bf016157fddbc4346087c6595bb3f57c58f02b6a8",
+        "size_in_bytes": 2704
+      },
+      {
+        "_path": "site-packages/discord/types/member.py",
+        "path_type": "hardlink",
+        "sha256": "bceb6d3e547f3d1a552a540d9e295c5a3344200241ca6542e8dd30d3c599db8f",
+        "sha256_in_prefix": "bceb6d3e547f3d1a552a540d9e295c5a3344200241ca6542e8dd30d3c599db8f",
+        "size_in_bytes": 1898
+      },
+      {
+        "_path": "site-packages/discord/types/message.py",
+        "path_type": "hardlink",
+        "sha256": "8027741dff73fa659ac73cd52539f76484eada9dca2b0818444f456146c2f5f6",
+        "sha256_in_prefix": "8027741dff73fa659ac73cd52539f76484eada9dca2b0818444f456146c2f5f6",
+        "size_in_bytes": 4251
+      },
+      {
+        "_path": "site-packages/discord/types/role.py",
+        "path_type": "hardlink",
+        "sha256": "9b564d4aae27f9235258b10b981576844ef4068e585ae6a8bdf2cb8570612fa5",
+        "sha256_in_prefix": "9b564d4aae27f9235258b10b981576844ef4068e585ae6a8bdf2cb8570612fa5",
+        "size_in_bytes": 1746
+      },
+      {
+        "_path": "site-packages/discord/types/scheduled_event.py",
+        "path_type": "hardlink",
+        "sha256": "5b04a2048496b0e0fcd4257105cd9dc1f9cb4826913ec654758156c96f28b892",
+        "sha256_in_prefix": "5b04a2048496b0e0fcd4257105cd9dc1f9cb4826913ec654758156c96f28b892",
+        "size_in_bytes": 3294
+      },
+      {
+        "_path": "site-packages/discord/types/snowflake.py",
+        "path_type": "hardlink",
+        "sha256": "c7f2f73976ae7b041a803afa8cfce3eee0b0d4c36a8a3b32f94a3dbef930bc5d",
+        "sha256_in_prefix": "c7f2f73976ae7b041a803afa8cfce3eee0b0d4c36a8a3b32f94a3dbef930bc5d",
+        "size_in_bytes": 1182
+      },
+      {
+        "_path": "site-packages/discord/types/sticker.py",
+        "path_type": "hardlink",
+        "sha256": "597407d8a68401ed1d2b5b67d29d19c315d5d0e7d6bb10c6044310741bb492be",
+        "sha256_in_prefix": "597407d8a68401ed1d2b5b67d29d19c315d5d0e7d6bb10c6044310741bb492be",
+        "size_in_bytes": 2257
+      },
+      {
+        "_path": "site-packages/discord/types/team.py",
+        "path_type": "hardlink",
+        "sha256": "ace823dff8785063134b1f5d83206b6135fed4c41976f3eaa498192ad9ce385e",
+        "sha256_in_prefix": "ace823dff8785063134b1f5d83206b6135fed4c41976f3eaa498192ad9ce385e",
+        "size_in_bytes": 1499
+      },
+      {
+        "_path": "site-packages/discord/types/template.py",
+        "path_type": "hardlink",
+        "sha256": "10ee2d0365b2a67b42190f6c5ae779552fee23c9f5da25551d53dc3600ad66f3",
+        "sha256_in_prefix": "10ee2d0365b2a67b42190f6c5ae779552fee23c9f5da25551d53dc3600ad66f3",
+        "size_in_bytes": 1609
+      },
+      {
+        "_path": "site-packages/discord/types/threads.py",
+        "path_type": "hardlink",
+        "sha256": "a7656e40277c35b01f215dc552c1b82301ec775b9793ead64027cfdb6450a8da",
+        "sha256_in_prefix": "a7656e40277c35b01f215dc552c1b82301ec775b9793ead64027cfdb6450a8da",
+        "size_in_bytes": 2454
+      },
+      {
+        "_path": "site-packages/discord/types/user.py",
+        "path_type": "hardlink",
+        "sha256": "7865bb02eee01816ec430a1df400d751d78f02b7d93a008cee44d305feabae41",
+        "sha256_in_prefix": "7865bb02eee01816ec430a1df400d751d78f02b7d93a008cee44d305feabae41",
+        "size_in_bytes": 1572
+      },
+      {
+        "_path": "site-packages/discord/types/voice.py",
+        "path_type": "hardlink",
+        "sha256": "c0540b88f65a42e5c1284d5d33f6dd58da64825a46142ee412d821c021c10d03",
+        "sha256_in_prefix": "c0540b88f65a42e5c1284d5d33f6dd58da64825a46142ee412d821c021c10d03",
+        "size_in_bytes": 2268
+      },
+      {
+        "_path": "site-packages/discord/types/webhook.py",
+        "path_type": "hardlink",
+        "sha256": "8aa05481bcf7f28d3f996a7e81c548d3fbaba6067f76ad847ce397002838eeef",
+        "sha256_in_prefix": "8aa05481bcf7f28d3f996a7e81c548d3fbaba6067f76ad847ce397002838eeef",
+        "size_in_bytes": 1978
+      },
+      {
+        "_path": "site-packages/discord/types/welcome_screen.py",
+        "path_type": "hardlink",
+        "sha256": "ba440c79f64b1e9832834ff9228033374517e3455aca1176be727334934c6730",
+        "sha256_in_prefix": "ba440c79f64b1e9832834ff9228033374517e3455aca1176be727334934c6730",
+        "size_in_bytes": 1460
+      },
+      {
+        "_path": "site-packages/discord/types/widget.py",
+        "path_type": "hardlink",
+        "sha256": "6119210e80476c212d92661354e4a81ccf18de61fd188768c2d868cfc2122585",
+        "sha256_in_prefix": "6119210e80476c212d92661354e4a81ccf18de61fd188768c2d868cfc2122585",
+        "size_in_bytes": 1883
+      },
+      {
+        "_path": "site-packages/discord/ui/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "cec4e530b4a2cba4735f33559758b958388ce69884fdb8330932d853dddac583",
+        "sha256_in_prefix": "cec4e530b4a2cba4735f33559758b958388ce69884fdb8330932d853dddac583",
+        "size_in_bytes": 285
+      },
+      {
+        "_path": "site-packages/discord/ui/button.py",
+        "path_type": "hardlink",
+        "sha256": "ff9178a0461f1702dc5de634e7a9d9fe0a7af33c8f4435a05a1d7b925a68b3f1",
+        "sha256_in_prefix": "ff9178a0461f1702dc5de634e7a9d9fe0a7af33c8f4435a05a1d7b925a68b3f1",
+        "size_in_bytes": 10620
+      },
+      {
+        "_path": "site-packages/discord/ui/item.py",
+        "path_type": "hardlink",
+        "sha256": "e18f974de616b16af0ae25358a1a55c5550e8821932207273cff309232dda82b",
+        "sha256_in_prefix": "e18f974de616b16af0ae25358a1a55c5550e8821932207273cff309232dda82b",
+        "size_in_bytes": 4372
+      },
+      {
+        "_path": "site-packages/discord/ui/modal.py",
+        "path_type": "hardlink",
+        "sha256": "55ece20a028241383c99e8b9705969bffe72a03ca8cca47609be0ea1266acc5e",
+        "sha256_in_prefix": "55ece20a028241383c99e8b9705969bffe72a03ca8cca47609be0ea1266acc5e",
+        "size_in_bytes": 7035
+      },
+      {
+        "_path": "site-packages/discord/ui/select.py",
+        "path_type": "hardlink",
+        "sha256": "cab8c1e35b03157404a2db325f0a8cd6f0127fb285f2ab3b448118b83734fddf",
+        "sha256_in_prefix": "cab8c1e35b03157404a2db325f0a8cd6f0127fb285f2ab3b448118b83734fddf",
+        "size_in_bytes": 34030
+      },
+      {
+        "_path": "site-packages/discord/ui/text_input.py",
+        "path_type": "hardlink",
+        "sha256": "eafaafc427437cc5a80cdadef85ebd2de7a84ae81d2fbdb1f23b4e17c856dd57",
+        "sha256_in_prefix": "eafaafc427437cc5a80cdadef85ebd2de7a84ae81d2fbdb1f23b4e17c856dd57",
+        "size_in_bytes": 8092
+      },
+      {
+        "_path": "site-packages/discord/ui/view.py",
+        "path_type": "hardlink",
+        "sha256": "2b124718a6fbebfee681f21f2e1cac3df42445649bfe652701c91723713e9851",
+        "sha256_in_prefix": "2b124718a6fbebfee681f21f2e1cac3df42445649bfe652701c91723713e9851",
+        "size_in_bytes": 22878
+      },
+      {
+        "_path": "site-packages/discord/user.py",
+        "path_type": "hardlink",
+        "sha256": "6597caabdee61bfc341dff12962d84f73a1419ac0a762df6182d9a2e1bf101ba",
+        "sha256_in_prefix": "6597caabdee61bfc341dff12962d84f73a1419ac0a762df6182d9a2e1bf101ba",
+        "size_in_bytes": 16504
+      },
+      {
+        "_path": "site-packages/discord/utils.py",
+        "path_type": "hardlink",
+        "sha256": "9965ec2523778ad47cd1fd8116da70ce097f0ae536946e34087acaf3d0a2e6c2",
+        "sha256_in_prefix": "9965ec2523778ad47cd1fd8116da70ce097f0ae536946e34087acaf3d0a2e6c2",
+        "size_in_bytes": 41506
+      },
+      {
+        "_path": "site-packages/discord/voice_client.py",
+        "path_type": "hardlink",
+        "sha256": "758cb0856ec2033b6ad1d9e7512ddb1b739e6d4c0b5536e77561208270144cba",
+        "sha256_in_prefix": "758cb0856ec2033b6ad1d9e7512ddb1b739e6d4c0b5536e77561208270144cba",
+        "size_in_bytes": 25089
+      },
+      {
+        "_path": "site-packages/discord/webhook/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e65c7b21c0857fd0c08dd5fb0957a7dfef038c701f1af4b5ad20d8dc3c959ea3",
+        "sha256_in_prefix": "e65c7b21c0857fd0c08dd5fb0957a7dfef038c701f1af4b5ad20d8dc3c959ea3",
+        "size_in_bytes": 182
+      },
+      {
+        "_path": "site-packages/discord/webhook/async_.py",
+        "path_type": "hardlink",
+        "sha256": "f4d696ece636a683066408dad029d009d62540429a816d33ada10f0d38bbbc7d",
+        "sha256_in_prefix": "f4d696ece636a683066408dad029d009d62540429a816d33ada10f0d38bbbc7d",
+        "size_in_bytes": 69729
+      },
+      {
+        "_path": "site-packages/discord/webhook/sync.py",
+        "path_type": "hardlink",
+        "sha256": "d6c7e3d5046885d035345044ee132f7cdd1bdfc8b46178a3cd41de35d7ee4281",
+        "sha256_in_prefix": "d6c7e3d5046885d035345044ee132f7cdd1bdfc8b46178a3cd41de35d7ee4281",
+        "size_in_bytes": 42586
+      },
+      {
+        "_path": "site-packages/discord/welcome_screen.py",
+        "path_type": "hardlink",
+        "sha256": "08fe62ddeba3ab3b7fc95b34201ad31ff30ecd39441b48a277dc41bccbc34189",
+        "sha256_in_prefix": "08fe62ddeba3ab3b7fc95b34201ad31ff30ecd39441b48a277dc41bccbc34189",
+        "size_in_bytes": 7539
+      },
+      {
+        "_path": "site-packages/discord/widget.py",
+        "path_type": "hardlink",
+        "sha256": "14ba8a70ec8f444eaa6ea80511b873d1126f9780c6ed48bbcf30e7969e526a92",
+        "sha256_in_prefix": "14ba8a70ec8f444eaa6ea80511b873d1126f9780c6ed48bbcf30e7969e526a92",
+        "size_in_bytes": 10426
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/__main__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/_types.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/abc.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/activity.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/checks.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/commands.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/errors.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/models.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/namespace.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/transformers.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/translator.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/app_commands/__pycache__/tree.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/appinfo.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/asset.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/audit_logs.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/automod.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/backoff.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/channel.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/client.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/colour.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/components.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/context_managers.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/embeds.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/emoji.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/enums.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/errors.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/_types.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/bot.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/cog.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/context.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/converter.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/cooldowns.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/core.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/errors.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/flags.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/help.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/hybrid.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/parameters.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/commands/__pycache__/view.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ext/tasks/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/file.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/flags.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/gateway.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/guild.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/http.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/integrations.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/interactions.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/invite.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/member.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/mentions.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/message.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/mixins.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/object.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/oggparse.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/opus.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/partial_emoji.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/permissions.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/player.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/raw_models.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/reaction.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/role.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/scheduled_event.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/shard.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/stage_instance.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/state.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/sticker.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/team.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/template.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/threads.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/activity.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/appinfo.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/audit_log.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/automod.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/channel.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/command.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/components.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/embed.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/emoji.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/gateway.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/guild.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/integration.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/interactions.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/invite.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/member.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/message.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/role.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/scheduled_event.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/snowflake.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/sticker.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/team.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/template.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/threads.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/user.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/voice.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/webhook.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/welcome_screen.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/types/__pycache__/widget.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/button.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/item.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/modal.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/select.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/text_input.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/ui/__pycache__/view.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/user.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/utils.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/voice_client.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/webhook/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/webhook/__pycache__/async_.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/webhook/__pycache__/sync.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/welcome_screen.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/discord/__pycache__/widget.cpython-312.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "discord.py",
+  "sha256": "f00d742abdcafc928d1b806cc6039b75c1b6cf68e12c6431311ecacc1ef9a4a2",
+  "size": 762480,
+  "subdir": "noarch",
+  "timestamp": 1691712087000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/discord.py-2.3.2-pyhd8ed1ab_0.conda",
+  "version": "2.3.2"
+}
