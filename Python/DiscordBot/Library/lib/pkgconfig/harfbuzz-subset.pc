@@ -1,0 +1,10 @@
+prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz-subset
+Description: HarfBuzz font subsetter
+Version: 4.3.0
+Requires: harfbuzz =  4.3.0
+Libs: -L${libdir} -lharfbuzz-subset
+Cflags: -I${includedir}/harfbuzz

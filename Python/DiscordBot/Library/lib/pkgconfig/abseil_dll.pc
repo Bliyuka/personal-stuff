@@ -1,0 +1,11 @@
+prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+exec_prefix=${prefix}
+libdir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib
+includedir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/include
+
+Name: abseil_dll
+Description: Abseil DLL library
+URL: https://abseil.io/
+Version: 20240116
+Libs: -L${libdir} -labseil_dll 
+Cflags: -I${includedir}

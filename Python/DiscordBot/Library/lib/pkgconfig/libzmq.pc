@@ -1,0 +1,12 @@
+prefix=f:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+exec_prefix=f:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+libdir=f:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib
+includedir=f:/Coding stuff/personal-stuff/Python/DiscordBot/Library/include
+
+Name: libzmq
+Description: 0MQ c++ library
+Version: 4.3.5
+Libs: -L${libdir} -lzmq
+Libs.private: -lstdc++ 
+Requires.private: 
+Cflags: -I${includedir} 

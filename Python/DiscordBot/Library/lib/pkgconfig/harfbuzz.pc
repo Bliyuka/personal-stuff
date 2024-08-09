@@ -1,0 +1,11 @@
+prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz
+Description: HarfBuzz text shaping library
+Version: 4.3.0
+Requires.private: graphite2, glib-2.0
+Libs: -L${libdir} -lharfbuzz
+Libs.private: F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib/freetype.lib -lusp10 -lgdi32 -lrpcrt4
+Cflags: -I${includedir}/harfbuzz

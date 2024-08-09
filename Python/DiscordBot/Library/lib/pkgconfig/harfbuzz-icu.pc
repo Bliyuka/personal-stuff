@@ -1,0 +1,11 @@
+prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz-icu
+Description: HarfBuzz text shaping library ICU integration
+Version: 4.3.0
+Requires: harfbuzz =  4.3.0
+Libs: -L${libdir} -lharfbuzz-icu
+Libs.private: F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib/icuuc.lib
+Cflags: -I${includedir}/harfbuzz

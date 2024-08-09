@@ -1,0 +1,11 @@
+prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library 
+exec_prefix=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library 
+libdir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib 
+includedir=F:/Coding stuff/personal-stuff/Python/DiscordBot/Library/include 
+modules=0 
+Name: libXML 
+Version: 2.10.4 
+Description: libXML library version2. 
+Requires: 
+Libs: -LF:/Coding stuff/personal-stuff/Python/DiscordBot/Library/lib -lxml2 -liconv -lz 
+Cflags: -IF:/Coding stuff/personal-stuff/Python/DiscordBot/Library/include/libxml 
