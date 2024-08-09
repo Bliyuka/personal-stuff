@@ -34,42 +34,78 @@ intents.message_content = True
 client: Client= Client(intents=intents)
 
 # --------------------------FUNCTIONS--------------------
-async def ping(ctx: Message, uMess) -> None:
+async def ping(message: Message, uMess) -> None:
     global pingSpamActive
     if 'stop' in uMess:
         pingSpamActive = False
-        await ctx.reply('ping stopped')
+        await message.reply('ping stopped')
         print('print stopped')
     else:
         user_ping = get_uID(uMess)
         if user_ping == 'no user found':
-            await ctx.channel.send(user_ping)
+            await message.channel.send(user_ping)
             return
         try:
             times = get_times(uMess)
-            if times >100: await ctx.channel.send('No tagging more than 100 times')
+            if times >100: await message.channel.send('No tagging more than 100 times')
             elif times <1: times = 1
         except: times = 1
         
         for i in range(times):
             if not pingSpamActive: break
             sleep(0.5)
-            await ctx.channel.send(f'{i+1}/{times} {user_ping}')
+            await message.channel.send(f'{i+1}/{times} {user_ping}')
 
-async def remove_messages(ctx:Message, uMess) -> None:
+async def remove_messages(message:Message, uMess) -> None:
     try: times = get_times(uMess) + 1
     except: times = 2
-    await ctx.channel.purge(limit=times)
+    await message.channel.purge(limit=times)
 
-async def QR_Scanner(ctx: Message, uMess) -> None:
+async def QR_Scanner(message: Message, uMess) -> None:
     try:
-        response = requests.get(ctx.attachments[0].url)
+        response = requests.get(message.attachments[0].url)
         img = Image.open(BytesIO(response.content))
         result = decode(img)
         url = result[0].data.decode('utf-8')
-        await ctx.reply(url)
+        await message.reply(url)
     except Exception as e:
-        await ctx.reply(f'Cannot scan - {e}')
+        await message.reply(f'Cannot scan - {e}')
+
+async def joinVC(message: Message, uMess) -> None:
+    if message.author.voice:
+        channel = message.author.voice.channel
+        try:
+            await channel.connect()
+            await message.reply(f"Connected to {channel}")
+        except discord.errors.ClientException as e:
+            await message.channel.send(f"Error connecting to voice channel: {e}")
+
+    else:
+        await message.reply("Vào voice ngồi đi đã r hẵng gọi t thằng lonz")
+
+async def leaveVC(message: Message, uMess) -> None:
+    if message.guild.voice_client:
+        await message.reply('fuck this im out')
+        await message.guild.voice_client.disconnect()
+    else:
+        await message.reply(f'I\'m not even in a voice chat bruh')
+
+async def TTS(message: Message, uMess) -> None:
+    text = message.content[len('tts     '):]
+    if message.content[len('tts '):len('tts ')+2] == 'vn': lang = 'vn'
+    else: lang = 'en'
+    tts = gTTS(text, lang=lang)
+    tts.save('tts.mp3')
+
+    if not message.guild.voice_client:
+        await joinVC(message, uMess)
+
+    if message.guild.voice_client:
+        message.guild.voice_client.play(discord.FFmpegPCMAudio('tts.mp3'), after=lambda e: print('done', e))
+        # os.remove('tts.mp3')
+    else:
+        await message.reply('let me in mtfk')
+
 
 
 
@@ -91,43 +127,22 @@ async def send_message(message: Message, user_message: str) -> None:
         try: # <----- shit happen from here
             # ping spam command
             # print(user_message)
-            if 'ping' == user_message[:4]: await ping(message, user_message)
-            
+            if 'ping' == user_message[:len('ping')]: await ping(message, user_message)
+
             # mass messages removal
-            elif 'mremove' == user_message[:7]: await remove_messages(message, user_message)
+            elif 'mremove' == user_message[:len('mremove')]: await remove_messages(message, user_message)
 
             # scanning qr code
-            elif 'qr scan' == user_message[:7]: await QR_Scanner(message, user_message)
+            elif 'qr scan' == user_message[:len('qr scan')]: await QR_Scanner(message, user_message)
 
-            elif 'join' in user_message:
-                
-                if message.author.voice:
-                    channel = message.author.voice.channel
-                    try:
-                        vc = await channel.connect()
-                        await message.reply(f"Connected to {channel}")
-                    except discord.errors.ClientException as e:
-                        await message.channel.send(f"Error connecting to voice channel: {e}")
-                else:
-                    await message.reply("Vào voice ngồi đi đã r hẵng gọi t thằng lonz")
+            # joining voice channel
+            elif 'join' == user_message[:len('join')]: await joinVC(message, user_message)
 
-            elif 'leave' in user_message:
-                if message.guild.voice_client:
-                    await message.reply('fuck this im out')
-                    await message.guild.voice_client.disconnect()
-                else:
-                    await message.reply(f'I\'m not even in a voice chat bruh')
+            # leaving voice channel
+            elif 'cuts' == user_message[:len('cuts')]: await leaveVC(message, user_message)
 
-            elif 'tts' in user_message:
-                text = message.content[len('tts '):]
-                tts = gTTS(text)
-                tts.save('tts.mp3')  
-
-                if message.guild.voice_client:
-                    message.guild.voice_client.play(discord.FFmpegPCMAudio('tts.mp3'), after=lambda e: print('done', e))
-                    # os.remove('tts.mp3')
-                else:
-                    await message.reply('let me in mtfk')
+            # text to speech
+            elif 'tts' == user_message[:len('tts')]: await TTS(message, user_message)
 
             # help, roll dice and other unrelated stuff
             else: await message.reply(get_response(user_message))
@@ -163,21 +178,3 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-    
-    
-    
-    
-    
-# async def test(message):
-#     if message.content.startswith('!tts'):
-#             text = message.content[len('!tts '):]
-#             tts = gTTS(text, lang='en')
-#             tts.save("tts.mp3")
-            
-#             voice_client = message.guild.voice_client
-#             if voice_client and voice_client.is_connected():
-#                 audio = AudioSegment.from_mp3("tts.mp3")
-#                 play(audio)
-#                 os.remove("tts.mp3")
-#             else:
-#                 await message.channel.send("I am not connected to a voice channel.")
