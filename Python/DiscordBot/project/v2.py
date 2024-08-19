@@ -88,94 +88,43 @@ async def send_message(message: Message, user_message: str) -> None:
             elif 'choose' == user_message[:len('choose')]: await choose(message, user_message)
 
 
-            # elif 'p' == user_message[:len('p')]:
-            #     global mURL
-            #     global mTITLE
+            elif 'p' == user_message[:len('p')]:
+                try: os.remove('song.mp3')
+                except: pass
                 
-            #     options = {
-            #         'format': 'bestaudio/best',
-            #         'keepvideo': False,
-            #         'outtmpl': 'song.mp3',
-            #         'extract_flat': True,
-            #         'quiet': True,
-            #     }
+                options = {
+                    'format': 'bestaudio/best',
+                    'keepvideo': False,
+                    'outtmpl': 'song.mp3',
+                    'extract_flat': True,
+                    'quiet': True,
+                }
                 
-            #     # join vc if not in yet
-            #     if not message.guild.voice_client:
-            #         await joinVC(message, user_message)
+                # join vc if not in yet
+                if not message.guild.voice_client:
+                    await joinVC(message, user_message)
 
-            #     # search using url
-            #     if 'http' in user_message:
-            #         video_url = message.content.split(' ')[1]
+                # search using url -> url
+                if 'http' in user_message:
+                    video_url = message.content.split(' ')[1]
 
-            #     # search with query
-            #     else:
-            #         query = message.content[len('p '):]
-            #         with yt_dlp.YoutubeDL(options) as ydl:
-            #             video_info = ydl.extract_info(f"ytsearch:{query}", download=False)
-            #             if 'entries' in video_info:
-            #                 video_url = video_info['entries'][0]['url']
+                # search with query -> url
+                else:
+                    query = message.content[len('p '):]
+                    with yt_dlp.YoutubeDL(options) as ydl:
+                        video_info = ydl.extract_info(f"ytsearch:{query}", download=False)
+                        if 'entries' in video_info:
+                            video_url = video_info['entries'][0]['url']
 
-            #     print('url extracted')
+                video_info = yt_dlp.YoutubeDL().extract_info(url=video_url, download=False)
+                title = video_info['title']
 
-            #     video_info = yt_dlp.YoutubeDL().extract_info(url=video_url, download=False)
-            #         # filename = f"{video_info['title']}.mp3"
+                with yt_dlp.YoutubeDL(options) as ydl:
+                    ydl.download([video_info['webpage_url']])
 
-            #     print('info extracted') # <-----------------
-            #     print('tao')
-            #     url = video_info['webpage_url']
-            #     print('xin')
-            #     mURL.append(url)
-            #     print('may')
-            #     title = video_info['title']
-            #     print('wtf')
-            #     mTITLE.append(title)
-            #     print('add đi')
-                
-            #     await message.channel.send(f'Added **{title}**')
-            #     # video_info = mURL[0]
-            #     # mURL.pop(0)
+                song_path = 'F:/Coding stuff/personal-stuff/Python/DiscordBot/project/song.mp3'
+                message.guild.voice_client.play(discord.FFmpegPCMAudio(song_path))
 
-            #     print('list added')
-            #     voice_client = message.guild.voice_client
-            #     if not voice_client.is_playing():
-            #         while mURL:
-            #             print('in while loop')
-            #             try: os.remove('song.mp3')
-            #             except Exception as e: print(e) 
-            #             print('tried remove song.mp3')
-                        
-            #             with yt_dlp.YoutubeDL(options) as ydl:
-            #                 ydl.download([mURL[0]])
-                            
-            #                 async def after_playing(error):
-            #                     if error: print(f'ERROR: {error}')
-            #                     if message.guild.voice_client:
-            #                         print('play song')
-            #                         mURL.pop(0)
-            #                         mTITLE.pop(0)
-            #                         await message.channel.send(f'Now playing - **{mTITLE[0]}**')
-            #                         message.guild.voice_client.play(discord.FFmpegPCMAudio('song.mp3'), after=after_playing)
-            #             # print(f"Download complete... {filename}")
-
-            #             print('download next song')
-
-            #             if message.guild.voice_client:
-            #                 print('play song')
-            #                 await message.channel.send(f'Now playing - **{mTITLE[0]}**')
-            #                 message.guild.voice_client.play(discord.FFmpegPCMAudio('song.mp3'), after= after_playing)
-                            
-
-
-
-
-
-# TODO:
-# 1. pause
-# 2. resume / play
-# 3. queue
-# 4. skip / stop (DONE)
-# 5. search for song (DONE)
 
 
             elif 's' == user_message[:len('s')]:
@@ -183,6 +132,8 @@ async def send_message(message: Message, user_message: str) -> None:
                 print('stop song')
                 if voice_client.is_playing():
                     voice_client.stop()
+
+
 
             # help, roll dice and other unrelated stuff
             else: await message.reply(get_response(user_message))
